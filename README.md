@@ -94,3 +94,4 @@ The included CSV has all 236 episode rows and has been structurally enriched for
 
 The site uses a FRIENDS-inspired design language: purple apartment door, yellow peephole frame, café cards, fridge-magnet chips, coffee motifs, and orange-sofa accents. It intentionally avoids using official logos, official stills as local assets, or hosted transcripts.
 # TheOnetoWatch
+# TheOnetoWatch
