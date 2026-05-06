@@ -1,0 +1,7 @@
+{
+  "rows": 236,
+  "placeholder_titles": 166,
+  "rows_with_main_plot": 236,
+  "rows_with_transcript_keywords": 236,
+  "method": "Full 236-row rule enrichment from title/synopsis fields; transcript import hooks included for live online enrichment."
+}

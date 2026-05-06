@@ -1,0 +1,2623 @@
+:root{
+  --purple:#7B5BA7;--deep:#4E3776;--yellow:#F4C430;--green:#1F5C4D;--brown:#6B4226;--orange:#C96F3A;--cream:#FFF2D8;--ink:#1D1B1B;--magnet:#eadcff;
+}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top left,#fff7dd 0,#f2d09a 26%,#7b5ba7 62%,#21172c 100%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);min-height:100vh}button,a{font:inherit}button{cursor:pointer}.door-wrap{position:fixed;inset:0;z-index:20;display:grid;place-items:center;background:radial-gradient(circle at center,#4e3776,#21172c 70%);perspective:1200px}.door-scene{display:grid;gap:22px;place-items:center}.door-copy{color:var(--cream);text-align:center;display:grid;gap:6px}.door-copy span{font-size:.9rem;letter-spacing:.18em;text-transform:uppercase;color:#f8d967}.door-copy strong{font-size:clamp(1.1rem,3vw,1.8rem)}.door{width:min(430px,82vw);height:min(720px,82vh);background:linear-gradient(135deg,#8b6bb8 0%,var(--purple) 44%,var(--deep) 100%);border:18px solid #2c173d;border-radius:18px;box-shadow:0 30px 80px #0009, inset 0 0 0 8px #6a498f;position:relative;transform-style:preserve-3d}.door:before{content:'';position:absolute;inset:32px;border:7px solid #6a498f;border-radius:12px;box-shadow:inset 0 0 30px #0003}.door:after{content:'';position:absolute;left:50%;top:40%;width:190px;height:240px;translate:-50% -50%;border:14px solid var(--yellow);border-radius:54% 54% 48% 48% / 40% 40% 58% 58%;filter:drop-shadow(0 0 20px #f4c430aa);pointer-events:none}.door-panel{position:absolute;left:55px;right:55px;border:6px solid #55357a;border-radius:14px;background:linear-gradient(145deg,#7d5cab,#54357a)}.door-panel.top{top:96px;height:190px}.door-panel.bottom{bottom:95px;height:250px}.door-knob{position:absolute;right:72px;top:50%;width:28px;height:28px;background:radial-gradient(circle at 35% 35%,#fff2a2,#a97900);border-radius:50%;box-shadow:0 0 12px #0007}.peephole{position:absolute;top:40%;left:50%;transform:translate(-50%,-50%);width:118px;height:150px;border-radius:60%/45%;border:0;background:#352347;color:var(--cream);font-weight:900;box-shadow:0 0 30px #f4c430aa;z-index:2}.peephole span{display:block;transform:translateY(4px)}.app-shell{max-width:1240px;margin:auto;padding:42px 20px}.title{font-size:clamp(3rem,9vw,7rem);text-align:center;margin:20px 0 0;color:var(--cream);text-shadow:0 5px 0 var(--deep),0 0 22px #0007;cursor:pointer;min-height:1.25em;display:grid;place-items:center}.title-long{font-size:clamp(1.65rem,4vw,3.5rem);max-width:940px;margin-left:auto;margin-right:auto;line-height:1.08}.hint{text-align:center;color:#fff0c9;margin-top:4px}.grid{display:grid;grid-template-columns:310px 1fr 395px;gap:22px;align-items:start}.control-card,.picker-card,.episode-card,.history{background:#fff7e6df;border:4px solid var(--yellow);border-radius:30px;padding:22px;box-shadow:0 16px 40px #2b174455;backdrop-filter:blur(10px);position:relative;overflow:hidden}.control-card:before,.picker-card:before,.episode-card:before,.history:before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#ffffff55,transparent 40%);pointer-events:none}.apartment-card{background:linear-gradient(160deg,#fff7e6df,#f6e5ffdf)}.perk-card{background:linear-gradient(160deg,#fff7e6e8,#dcefe8e8)}.fridge-card{background:linear-gradient(160deg,#fff7e6e8,#eef4ffe8)}.card-kicker{letter-spacing:.13em;text-transform:uppercase;font-size:.72rem;color:var(--deep);font-weight:900;margin-bottom:12px}.big{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:20px;background:var(--green);color:white;padding:16px;font-weight:900;box-shadow:0 8px 0 #12372e;transition:transform .15s ease, box-shadow .15s ease}.big:hover{transform:translateY(-2px);box-shadow:0 10px 0 #12372e}.random-button{background:linear-gradient(135deg,var(--green),#2b7c68)}.lookup{margin-top:24px}.lookup-row{display:flex;gap:8px;margin-top:10px;align-items:end}.lookup label{display:grid;font-size:.75rem;font-weight:900;color:var(--deep)}.lookup input{width:64px;border:2px solid #d3a81e;border-radius:12px;padding:10px;background:#fffdf6}.lookup button,.actions button{border:0;border-radius:14px;padding:10px;background:var(--orange);color:white;font-weight:800;display:flex;gap:6px;align-items:center}.form-error{color:#7d1f1f;font-weight:800;margin-bottom:0}.mini-note{display:flex;gap:10px;margin-top:22px;padding:14px;border-radius:18px;background:#fff4d7;border:2px dashed #d7aa19;font-size:.92rem}.presets{margin:12px 0}.preset-grid{display:flex;flex-wrap:wrap}.chip-section{margin:18px 0}.chip-section b{display:block;margin-bottom:8px;color:#2e1d3c}.chips-wrap{display:flex;flex-wrap:wrap}.chip{border:2px solid #d0a11a;border-radius:999px;background:#fffdf4;margin:4px;padding:8px 11px;position:relative;box-shadow:0 4px 0 #00000012;transition:transform .12s ease}.chip:hover{transform:rotate(-1deg) translateY(-1px)}.chip.active{background:var(--yellow);box-shadow:0 0 0 3px #0001 inset,0 5px 0 #ad8708;font-weight:900}.episode-card h2{font-size:clamp(1.65rem,3vw,2.25rem);margin:.35em 0}.episode-topline{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.episode-code{display:inline-block;background:var(--purple);color:white;padding:8px 12px;border-radius:999px;font-weight:900}.curation-badge{display:inline-block;background:#fff;border:1px solid #e0c24d;color:#5e4610;padding:6px 10px;border-radius:999px;font-size:.78rem}.synopsis{font-size:1.02rem;line-height:1.45}.plot-box{background:#fff9ed;border-left:6px solid var(--orange);padding:12px 14px;border-radius:16px;margin:16px 0}.plot-box p{margin:.3rem 0 0}.tag-cloud{display:flex;flex-wrap:wrap;margin:12px 0}.tag-cloud span{display:inline-block;margin:4px;padding:6px 9px;background:var(--magnet);border-radius:999px;font-size:.86rem}.score-row{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.score-row span{background:#fff;border:1px solid #ddd;border-radius:10px;padding:7px}.actions{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0}.actions a,.actions button{display:flex;gap:7px;align-items:center;text-decoration:none}.actions .primary{background:var(--green);color:white;border-radius:14px;padding:10px 14px;font-weight:900}.history{margin-top:14px}.history p{font-size:.88rem;margin:.4rem 0 .8rem}.history-buttons{display:flex;flex-wrap:wrap}.history button{margin:5px;border:0;border-radius:10px;background:#fff;padding:8px;box-shadow:0 3px 0 #0001}.empty{min-height:210px;display:grid;place-items:center;text-align:center;color:#5e4b2d}.result-column{display:grid;gap:14px}footer{text-align:center;color:#fff8df;margin-top:25px}.coffee-ring{position:absolute;border:2px solid #6b42263b;border-radius:50%;width:130px;height:130px;right:-25px;bottom:-25px;transform:rotate(-15deg)}@media(max-width:1080px){.grid{grid-template-columns:1fr 1fr}.result-column{grid-column:1/-1}}@media(max-width:760px){.app-shell{padding:24px 14px}.grid{grid-template-columns:1fr}.title{font-size:3.3rem}.title-long{font-size:1.65rem}.lookup-row{flex-wrap:wrap}.control-card,.picker-card,.episode-card,.history{border-radius:24px;padding:18px}.door{height:78vh}}
+
+/* Refined title lockup */
+.title-lockup {
+  text-align: center;
+  color: var(--cream);
+  cursor: pointer;
+  margin: 18px auto 22px;
+  min-height: clamp(7.8rem, 12vw, 10.5rem);
+  display: grid;
+  place-items: center;
+  user-select: none;
+}
+
+.title-main {
+  font-size: clamp(3.2rem, 9vw, 7.6rem);
+  line-height: 0.92;
+  margin: 0;
+  color: var(--cream);
+  text-shadow:
+    0 5px 0 var(--deep),
+    0 18px 34px rgba(0,0,0,.35);
+}
+
+.title-tagline {
+  max-width: 880px;
+  margin: 12px auto 0;
+  font-size: clamp(1rem, 2.1vw, 1.55rem);
+  line-height: 1.25;
+  font-weight: 850;
+  color: #fff0c9;
+  text-shadow: 0 8px 22px rgba(0,0,0,.32);
+}
+
+/* Refined entry screen */
+.refined-door-wrap {
+  background:
+    radial-gradient(circle at 22% 18%, rgba(244,196,48,.22), transparent 26%),
+    radial-gradient(circle at 76% 76%, rgba(31,92,77,.38), transparent 28%),
+    linear-gradient(135deg, #21172c 0%, #4e3776 48%, #23142d 100%);
+  overflow: hidden;
+}
+
+.ambient-light {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(22px);
+  opacity: .55;
+  pointer-events: none;
+}
+
+.ambient-one {
+  width: 260px;
+  height: 260px;
+  background: rgba(244,196,48,.23);
+  left: 8%;
+  top: 10%;
+}
+
+.ambient-two {
+  width: 320px;
+  height: 320px;
+  background: rgba(31,92,77,.34);
+  right: 7%;
+  bottom: 8%;
+}
+
+.entry-scene {
+  width: min(1080px, 92vw);
+  display: grid;
+  grid-template-columns: 1fr minmax(290px, 390px);
+  gap: clamp(28px, 6vw, 78px);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.entry-copy {
+  color: var(--cream);
+  text-align: left;
+}
+
+.entry-copy .eyebrow {
+  display: inline-block;
+  color: var(--yellow);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: .78rem;
+  font-weight: 950;
+  margin-bottom: 16px;
+}
+
+.entry-copy h2 {
+  font-size: clamp(2.4rem, 6vw, 5.7rem);
+  line-height: .94;
+  margin: 0 0 18px;
+  letter-spacing: -.055em;
+  text-shadow: 0 18px 34px rgba(0,0,0,.35);
+}
+
+.entry-copy p {
+  max-width: 540px;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  line-height: 1.55;
+  color: #fff0c9;
+  margin: 0;
+}
+
+.refined-door {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  color: var(--cream);
+}
+
+.door-surface {
+  width: min(390px, 80vw);
+  height: min(600px, 72vh);
+  position: relative;
+  border-radius: 24px;
+  background:
+    linear-gradient(130deg, rgba(255,255,255,.11), transparent 22%),
+    linear-gradient(155deg, #9270bf 0%, #7b5ba7 42%, #4e3776 100%);
+  box-shadow:
+    0 36px 90px rgba(0,0,0,.45),
+    inset 0 0 0 9px rgba(255,255,255,.055),
+    inset 0 0 0 18px rgba(44,23,61,.52);
+  overflow: hidden;
+}
+
+.door-surface::before {
+  content: '';
+  position: absolute;
+  inset: 28px;
+  border-radius: 18px;
+  border: 2px solid rgba(255,255,255,.11);
+  box-shadow: inset 0 0 40px rgba(0,0,0,.16);
+}
+
+.door-rail,
+.door-stile {
+  position: absolute;
+  background: rgba(49,27,69,.26);
+  border: 1px solid rgba(255,255,255,.07);
+  box-shadow: inset 0 0 18px rgba(0,0,0,.18);
+}
+
+.rail-top {
+  left: 50px;
+  right: 50px;
+  top: 86px;
+  height: 118px;
+  border-radius: 18px;
+}
+
+.rail-bottom {
+  left: 50px;
+  right: 50px;
+  bottom: 82px;
+  height: 178px;
+  border-radius: 18px;
+}
+
+.stile-left {
+  top: 34px;
+  bottom: 34px;
+  left: 34px;
+  width: 12px;
+  border-radius: 999px;
+}
+
+.stile-right {
+  top: 34px;
+  bottom: 34px;
+  right: 34px;
+  width: 12px;
+  border-radius: 999px;
+}
+
+.yellow-frame {
+  position: absolute;
+  left: 50%;
+  top: 39%;
+  width: 166px;
+  height: 214px;
+  translate: -50% -50%;
+  border: 13px solid var(--yellow);
+  border-radius: 54% 54% 48% 48% / 39% 39% 58% 58%;
+  background:
+    radial-gradient(circle at center, rgba(33,23,44,.92) 0 28%, transparent 29%);
+}
+
+.peephole-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 35% 30%, #fff7c2, #c79212 38%, #503409 100%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  box-shadow: 0 0 20px rgba(244,196,48,.6);
+}
+
+.brass-knob {
+  position: absolute;
+  right: 66px;
+  top: 53%;
+  width: 25px;
+  height: 25px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 34% 30%, #fff4b5, #c58a12 45%, #60400b 100%);
+  box-shadow: 0 7px 18px rgba(0,0,0,.34);
+}
+
+.door-bottom-glow {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: -42px;
+  height: 78px;
+  background: radial-gradient(ellipse at center, rgba(244,196,48,.22), transparent 70%);
+}
+
+.enter-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,247,230,.13);
+  color: var(--cream);
+  border: 1px solid rgba(244,196,48,.45);
+  border-radius: 999px;
+  padding: 11px 18px;
+  font-weight: 950;
+  letter-spacing: .02em;
+  backdrop-filter: blur(8px);
+}
+
+.refined-door:hover .enter-label {
+  background: var(--yellow);
+  color: #21172c;
+}
+
+@media(max-width: 760px) {
+  .title-lockup {
+    min-height: 7.2rem;
+    margin-top: 8px;
+  }
+
+  .title-main {
+    font-size: clamp(3rem, 15vw, 4.3rem);
+  }
+
+  .title-tagline {
+    font-size: 1rem;
+    max-width: 330px;
+  }
+
+  .entry-scene {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    text-align: center;
+  }
+
+  .entry-copy {
+    text-align: center;
+  }
+
+  .entry-copy p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .door-surface {
+    height: 52vh;
+    max-height: 430px;
+  }
+}
+
+
+/* ==========================================================
+   THE ONE TO WATCH — THEME SYSTEM V2
+   Proper dark/light implementation
+   ========================================================== */
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html[data-theme="dark"] {
+  --page-bg-a: #17101f;
+  --page-bg-b: #402a61;
+  --page-bg-c: #16473d;
+
+  --surface: rgba(255, 242, 216, 0.12);
+  --surface-strong: rgba(255, 242, 216, 0.18);
+  --surface-solid: #2a1d38;
+
+  --text-main: #fff2d8;
+  --text-soft: rgba(255, 242, 216, 0.74);
+  --text-muted: rgba(255, 242, 216, 0.56);
+
+  --accent-yellow: #f4c430;
+  --accent-purple: #7b5ba7;
+  --accent-green: #1f5c4d;
+  --accent-orange: #c96f3a;
+
+  --border-soft: rgba(244, 196, 48, 0.28);
+  --border-strong: rgba(244, 196, 48, 0.56);
+
+  --shadow-soft: rgba(0, 0, 0, 0.32);
+  --shadow-strong: rgba(0, 0, 0, 0.48);
+
+  --input-bg: rgba(255, 242, 216, 0.1);
+  --input-text: #fff2d8;
+  --button-text: #21172c;
+}
+
+html[data-theme="light"] {
+  --page-bg-a: #fff4df;
+  --page-bg-b: #f4d28d;
+  --page-bg-c: #f9ead0;
+
+  --surface: rgba(255, 255, 255, 0.66);
+  --surface-strong: rgba(255, 255, 255, 0.88);
+  --surface-solid: #fff9ef;
+
+  --text-main: #281936;
+  --text-soft: rgba(40, 25, 54, 0.76);
+  --text-muted: rgba(40, 25, 54, 0.56);
+
+  --accent-yellow: #d99a00;
+  --accent-purple: #6b4aa0;
+  --accent-green: #1f5c4d;
+  --accent-orange: #bb5f2f;
+
+  --border-soft: rgba(107, 74, 160, 0.24);
+  --border-strong: rgba(107, 74, 160, 0.5);
+
+  --shadow-soft: rgba(96, 58, 22, 0.13);
+  --shadow-strong: rgba(96, 58, 22, 0.2);
+
+  --input-bg: rgba(255, 255, 255, 0.78);
+  --input-text: #281936;
+  --button-text: #281936;
+}
+
+/* Apply theme everywhere */
+html[data-theme="dark"] body,
+body[data-theme="dark"],
+html[data-theme="light"] body,
+body[data-theme="light"] {
+  color: var(--text-main) !important;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(244, 196, 48, 0.22), transparent 24%),
+    radial-gradient(circle at 82% 20%, rgba(201, 111, 58, 0.18), transparent 25%),
+    radial-gradient(circle at 76% 82%, rgba(31, 92, 77, 0.26), transparent 26%),
+    linear-gradient(135deg, var(--page-bg-a), var(--page-bg-b) 54%, var(--page-bg-c)) !important;
+  transition:
+    background 0.36s ease,
+    color 0.24s ease;
+}
+
+/* Light mode should feel like warm café daylight, not washed out */
+html[data-theme="light"] body,
+body[data-theme="light"] {
+  background:
+    radial-gradient(circle at 16% 10%, rgba(244, 196, 48, 0.34), transparent 26%),
+    radial-gradient(circle at 78% 18%, rgba(201, 111, 58, 0.16), transparent 24%),
+    radial-gradient(circle at 72% 84%, rgba(31, 92, 77, 0.12), transparent 28%),
+    linear-gradient(135deg, #fff7e8, #f0c778 48%, #fff1d1) !important;
+}
+
+/* Text reset */
+html[data-theme] h1,
+html[data-theme] h2,
+html[data-theme] h3,
+html[data-theme] h4,
+html[data-theme] p,
+html[data-theme] span,
+html[data-theme] label,
+html[data-theme] small,
+html[data-theme] li {
+  color: inherit;
+}
+
+/* Major app containers/cards */
+html[data-theme] .app-shell,
+html[data-theme] .layout,
+html[data-theme] main,
+html[data-theme] .main-grid,
+html[data-theme] .dashboard-grid,
+html[data-theme] .feature-frame {
+  color: var(--text-main) !important;
+}
+
+html[data-theme] .card,
+html[data-theme] .panel,
+html[data-theme] .episode-card,
+html[data-theme] .picker-card,
+html[data-theme] .result-card,
+html[data-theme] .history-drawer,
+html[data-theme] .history-panel,
+html[data-theme] .mood-panel,
+html[data-theme] .lookup-panel,
+html[data-theme] .random-panel,
+html[data-theme] .selector-panel,
+html[data-theme] .episode-result,
+html[data-theme] .episode-display,
+html[data-theme] .control-card,
+html[data-theme] section,
+html[data-theme] article {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.08), transparent 42%),
+    var(--surface) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-soft) !important;
+  box-shadow:
+    0 22px 55px var(--shadow-soft),
+    inset 0 1px 0 rgba(255,255,255,0.12) !important;
+  backdrop-filter: blur(14px);
+}
+
+/* Stronger white cards in light mode */
+html[data-theme="light"] .card,
+html[data-theme="light"] .panel,
+html[data-theme="light"] .episode-card,
+html[data-theme="light"] .picker-card,
+html[data-theme="light"] .result-card,
+html[data-theme="light"] .history-drawer,
+html[data-theme="light"] .history-panel,
+html[data-theme="light"] .mood-panel,
+html[data-theme="light"] .lookup-panel,
+html[data-theme="light"] .random-panel,
+html[data-theme="light"] .selector-panel,
+html[data-theme="light"] .episode-result,
+html[data-theme="light"] .episode-display,
+html[data-theme="light"] .control-card,
+html[data-theme="light"] section,
+html[data-theme="light"] article {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.66), rgba(255,255,255,0.34)),
+    var(--surface-strong) !important;
+}
+
+/* Inputs */
+html[data-theme] input,
+html[data-theme] select,
+html[data-theme] textarea {
+  background: var(--input-bg) !important;
+  color: var(--input-text) !important;
+  border: 1px solid var(--border-soft) !important;
+  outline: none;
+}
+
+html[data-theme] input::placeholder,
+html[data-theme] textarea::placeholder {
+  color: var(--text-muted) !important;
+}
+
+html[data-theme] input:focus,
+html[data-theme] select:focus,
+html[data-theme] textarea:focus {
+  border-color: var(--border-strong) !important;
+  box-shadow: 0 0 0 3px rgba(244, 196, 48, 0.18) !important;
+}
+
+/* Buttons */
+html[data-theme] button,
+html[data-theme] .button,
+html[data-theme] .primary-button,
+html[data-theme] .netflix-button,
+html[data-theme] a.button {
+  border-color: var(--border-soft);
+}
+
+html[data-theme] .primary-button,
+html[data-theme] .netflix-button {
+  background: linear-gradient(135deg, var(--accent-yellow), #f2ae2e) !important;
+  color: var(--button-text) !important;
+  box-shadow: 0 14px 30px var(--shadow-soft) !important;
+}
+
+html[data-theme] .secondary-button,
+html[data-theme] .ghost-button {
+  background: var(--surface) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-soft) !important;
+}
+
+/* Tags/chips */
+html[data-theme] .tag-chip,
+html[data-theme] .chip,
+html[data-theme] .tag,
+html[data-theme] .preset-chip,
+html[data-theme] .filter-chip {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.18), transparent 48%),
+    var(--surface-strong) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-soft) !important;
+  box-shadow: 0 8px 18px var(--shadow-soft) !important;
+}
+
+html[data-theme] .tag-chip.active,
+html[data-theme] .chip.active,
+html[data-theme] .tag.active,
+html[data-theme] .preset-chip.active,
+html[data-theme] .filter-chip.active,
+html[data-theme] button.active {
+  background: linear-gradient(135deg, var(--accent-yellow), var(--accent-orange)) !important;
+  color: #21172c !important;
+  border-color: rgba(244, 196, 48, 0.75) !important;
+}
+
+/* Title */
+html[data-theme] .title-main {
+  color: var(--text-main) !important;
+}
+
+html[data-theme="dark"] .title-main {
+  text-shadow:
+    0 5px 0 #4e3776,
+    0 18px 34px rgba(0,0,0,.35) !important;
+}
+
+html[data-theme="light"] .title-main {
+  color: #281936 !important;
+  text-shadow:
+    0 3px 0 rgba(244, 196, 48, .78),
+    0 16px 32px rgba(96, 58, 22, .16) !important;
+}
+
+html[data-theme] .title-tagline {
+  color: var(--text-soft) !important;
+}
+
+html[data-theme="dark"] .title-tagline {
+  color: #fff0c9 !important;
+}
+
+/* Door intro theme */
+html[data-theme="dark"] .refined-door-wrap {
+  background:
+    radial-gradient(circle at 22% 18%, rgba(244,196,48,.22), transparent 26%),
+    radial-gradient(circle at 76% 76%, rgba(31,92,77,.38), transparent 28%),
+    linear-gradient(135deg, #21172c 0%, #4e3776 48%, #23142d 100%) !important;
+}
+
+html[data-theme="light"] .refined-door-wrap {
+  background:
+    radial-gradient(circle at 20% 18%, rgba(244,196,48,.36), transparent 28%),
+    radial-gradient(circle at 80% 76%, rgba(31,92,77,.16), transparent 30%),
+    linear-gradient(135deg, #fff5df 0%, #f2c678 48%, #fff7e8 100%) !important;
+}
+
+html[data-theme] .entry-copy {
+  color: var(--text-main) !important;
+}
+
+html[data-theme] .entry-copy p {
+  color: var(--text-soft) !important;
+}
+
+html[data-theme] .entry-copy .eyebrow {
+  color: var(--accent-yellow) !important;
+}
+
+/* Theme toggle v2 */
+.theme-toggle-v2 {
+  margin-top: 18px;
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid var(--border-soft) !important;
+  background: var(--surface-strong) !important;
+  color: var(--text-main) !important;
+  border-radius: 999px;
+  padding: 8px 11px 8px 8px;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 12px 28px var(--shadow-soft) !important;
+  backdrop-filter: blur(12px);
+}
+
+.theme-toggle-v2:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong) !important;
+}
+
+.theme-toggle-v2-track {
+  width: 44px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.24);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+}
+
+html[data-theme="light"] .theme-toggle-v2-track {
+  background: rgba(107, 74, 160, .18);
+}
+
+.theme-toggle-v2-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  background: var(--accent-yellow);
+  box-shadow: 0 5px 12px var(--shadow-soft);
+  transform: translateX(0);
+  transition: transform .22s ease, background .22s ease;
+}
+
+html[data-theme="light"] .theme-toggle-v2-thumb {
+  transform: translateX(20px);
+  background: #fff7dc;
+}
+
+.theme-toggle-v2-text {
+  color: var(--text-main) !important;
+  font-size: .78rem;
+  letter-spacing: .02em;
+}
+
+/* Top row */
+.top-brand-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 18px;
+  width: min(1180px, 94vw);
+  margin: 0 auto;
+}
+
+/* Remove empty disclaimer-style areas if they remain */
+.meta-note,
+.disclaimer,
+.footer-note,
+.data-note,
+.legal-note {
+  display: none !important;
+}
+
+/* Mobile */
+@media(max-width: 760px) {
+  .top-brand-row {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-toggle-v2 {
+    justify-self: center;
+    margin-top: -8px;
+    margin-bottom: 12px;
+  }
+
+  .theme-toggle-v2-text {
+    display: none;
+  }
+}
+
+
+
+/* ==========================================================
+   THE ONE TO WATCH — THEMATIC PUNCH V3
+   Warmer light mode + stronger FRIENDS-inspired motifs
+   ========================================================== */
+
+/* Richer daylight palette */
+html[data-theme="light"] {
+  --page-bg-a: #fff1d6;
+  --page-bg-b: #f4bb58;
+  --page-bg-c: #e78b47;
+
+  --surface: rgba(255, 249, 235, 0.74);
+  --surface-strong: rgba(255, 255, 255, 0.92);
+  --surface-solid: #fff7e8;
+
+  --text-main: #2b1939;
+  --text-soft: rgba(43, 25, 57, 0.78);
+  --text-muted: rgba(43, 25, 57, 0.58);
+
+  --accent-yellow: #f2b705;
+  --accent-purple: #7b4fb3;
+  --accent-green: #1f6b57;
+  --accent-orange: #d66c35;
+  --accent-red: #b84434;
+  --accent-blue: #2574a9;
+
+  --border-soft: rgba(123, 79, 179, 0.28);
+  --border-strong: rgba(214, 108, 53, 0.42);
+
+  --shadow-soft: rgba(117, 68, 28, 0.18);
+  --shadow-strong: rgba(117, 68, 28, 0.28);
+
+  --input-bg: rgba(255, 255, 255, 0.86);
+  --input-text: #2b1939;
+  --button-text: #24162f;
+}
+
+/* Richer light background */
+html[data-theme="light"] body,
+body[data-theme="light"] {
+  background:
+    radial-gradient(circle at 13% 12%, rgba(244, 183, 5, 0.48), transparent 23%),
+    radial-gradient(circle at 86% 16%, rgba(123, 79, 179, 0.22), transparent 25%),
+    radial-gradient(circle at 78% 78%, rgba(31, 107, 87, 0.24), transparent 28%),
+    radial-gradient(circle at 26% 86%, rgba(214, 108, 53, 0.32), transparent 26%),
+    linear-gradient(135deg, #fff6e6 0%, #f6cf78 42%, #e88b4c 100%) !important;
+}
+
+/* Add a subtle apartment-wall / café-paper texture */
+html[data-theme] body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: .18;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.34) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
+
+html[data-theme="light"] body::after {
+  opacity: .28;
+  background-image:
+    radial-gradient(circle, rgba(123,79,179,.18) 1.3px, transparent 1.3px);
+}
+
+/* Top brand area gets more personality */
+.top-brand-row {
+  padding-top: 8px;
+}
+
+.title-lockup {
+  position: relative;
+}
+
+.title-lockup::before {
+  content: '';
+  position: absolute;
+  width: min(420px, 70vw);
+  height: 18px;
+  bottom: 10px;
+  left: 50%;
+  translate: -50% 0;
+  background: linear-gradient(90deg, transparent, rgba(244,196,48,.34), transparent);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+html[data-theme="light"] .title-lockup::before {
+  background: linear-gradient(90deg, transparent, rgba(214,108,53,.42), transparent);
+}
+
+/* Decorative FRIENDS-colour dots, without using the official logo */
+.title-main::after {
+  content: '';
+  display: block;
+  width: 118px;
+  height: 12px;
+  margin: 18px auto 0;
+  background:
+    radial-gradient(circle at 8px 6px, #e53935 0 5px, transparent 6px),
+    radial-gradient(circle at 38px 6px, #f4c430 0 5px, transparent 6px),
+    radial-gradient(circle at 68px 6px, #2574a9 0 5px, transparent 6px),
+    radial-gradient(circle at 98px 6px, #1f6b57 0 5px, transparent 6px);
+  opacity: .9;
+}
+
+/* Cards become warmer and more café-like */
+html[data-theme="light"] .card,
+html[data-theme="light"] .panel,
+html[data-theme="light"] .episode-card,
+html[data-theme="light"] .picker-card,
+html[data-theme="light"] .result-card,
+html[data-theme="light"] .history-drawer,
+html[data-theme="light"] .history-panel,
+html[data-theme="light"] .mood-panel,
+html[data-theme="light"] .lookup-panel,
+html[data-theme="light"] .random-panel,
+html[data-theme="light"] .selector-panel,
+html[data-theme="light"] .episode-result,
+html[data-theme="light"] .episode-display,
+html[data-theme="light"] .control-card,
+html[data-theme="light"] section,
+html[data-theme="light"] article {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.9), rgba(255,244,218,.66)),
+    radial-gradient(circle at top right, rgba(244,183,5,.15), transparent 38%),
+    var(--surface-strong) !important;
+  border: 1px solid rgba(123,79,179,.22) !important;
+  box-shadow:
+    0 26px 58px rgba(117,68,28,.16),
+    inset 0 1px 0 rgba(255,255,255,.82) !important;
+}
+
+/* Stronger colourful section accents */
+html[data-theme] .episode-card::before,
+html[data-theme] .result-card::before,
+html[data-theme] .picker-card::before,
+html[data-theme] .mood-panel::before,
+html[data-theme] .lookup-panel::before,
+html[data-theme] .random-panel::before {
+  content: '';
+  display: block;
+  height: 6px;
+  width: 96px;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      #e53935 0 18%,
+      #f4c430 18% 42%,
+      #2574a9 42% 68%,
+      #1f6b57 68% 100%
+    );
+  margin-bottom: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.12);
+}
+
+/* Buttons should stay vibrant in light mode */
+html[data-theme="light"] .primary-button,
+html[data-theme="light"] .netflix-button,
+html[data-theme="light"] button.primary,
+html[data-theme="light"] a.primary {
+  background:
+    linear-gradient(135deg, #f4c430 0%, #f0a11f 48%, #d66c35 100%) !important;
+  color: #281936 !important;
+  border: 1px solid rgba(123,79,179,.22) !important;
+  box-shadow: 0 16px 34px rgba(117,68,28,.22) !important;
+}
+
+html[data-theme="light"] .secondary-button,
+html[data-theme="light"] .ghost-button {
+  background: rgba(255,255,255,.62) !important;
+  color: #2b1939 !important;
+  border: 1px solid rgba(123,79,179,.22) !important;
+}
+
+/* Fridge-magnet chips with more colour */
+html[data-theme="light"] .tag-chip,
+html[data-theme="light"] .chip,
+html[data-theme="light"] .tag,
+html[data-theme="light"] .preset-chip,
+html[data-theme="light"] .filter-chip {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.78), rgba(255,236,192,.58)) !important;
+  color: #2b1939 !important;
+  border: 1px solid rgba(123,79,179,.24) !important;
+  box-shadow:
+    0 9px 18px rgba(117,68,28,.14),
+    inset 0 1px 0 rgba(255,255,255,.82) !important;
+}
+
+html[data-theme] .tag-chip:nth-child(4n+1),
+html[data-theme] .chip:nth-child(4n+1),
+html[data-theme] .preset-chip:nth-child(4n+1),
+html[data-theme] .filter-chip:nth-child(4n+1) {
+  border-top-color: rgba(229,57,53,.48) !important;
+}
+
+html[data-theme] .tag-chip:nth-child(4n+2),
+html[data-theme] .chip:nth-child(4n+2),
+html[data-theme] .preset-chip:nth-child(4n+2),
+html[data-theme] .filter-chip:nth-child(4n+2) {
+  border-top-color: rgba(244,196,48,.7) !important;
+}
+
+html[data-theme] .tag-chip:nth-child(4n+3),
+html[data-theme] .chip:nth-child(4n+3),
+html[data-theme] .preset-chip:nth-child(4n+3),
+html[data-theme] .filter-chip:nth-child(4n+3) {
+  border-top-color: rgba(37,116,169,.5) !important;
+}
+
+html[data-theme] .tag-chip:nth-child(4n),
+html[data-theme] .chip:nth-child(4n),
+html[data-theme] .preset-chip:nth-child(4n),
+html[data-theme] .filter-chip:nth-child(4n) {
+  border-top-color: rgba(31,107,87,.55) !important;
+}
+
+/* Add playful labels to major areas if class names exist */
+.random-panel,
+.lookup-panel,
+.mood-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.random-panel::after,
+.lookup-panel::after,
+.mood-panel::after {
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  font-size: 1.8rem;
+  opacity: .13;
+  pointer-events: none;
+}
+
+.random-panel::after {
+  content: '🎲';
+}
+
+.lookup-panel::after {
+  content: '📼';
+}
+
+.mood-panel::after {
+  content: '☕';
+}
+
+/* Entry scene extra tags */
+.entry-mini-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.entry-mini-tags span {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(244,196,48,.32);
+  background: rgba(255,242,216,.12);
+  color: #fff2d8;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 850;
+  font-size: .86rem;
+  backdrop-filter: blur(10px);
+}
+
+html[data-theme="light"] .entry-mini-tags span {
+  background: rgba(255,255,255,.62);
+  color: #2b1939;
+  border-color: rgba(123,79,179,.24);
+}
+
+/* Improved door surface */
+.friends-door .door-surface {
+  background:
+    linear-gradient(125deg, rgba(255,255,255,.12), transparent 24%),
+    radial-gradient(circle at 72% 22%, rgba(244,196,48,.10), transparent 22%),
+    linear-gradient(155deg, #9a73c9 0%, #7b5ba7 42%, #4a2d70 100%) !important;
+}
+
+html[data-theme="light"] .friends-door .door-surface {
+  background:
+    linear-gradient(125deg, rgba(255,255,255,.18), transparent 24%),
+    radial-gradient(circle at 72% 22%, rgba(244,196,48,.22), transparent 22%),
+    linear-gradient(155deg, #a17ad1 0%, #7b5ba7 46%, #5b3d86 100%) !important;
+}
+
+/* Door panels */
+.door-panel {
+  position: absolute;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.09);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.07), rgba(0,0,0,.08));
+  box-shadow:
+    inset 0 0 24px rgba(0,0,0,.14),
+    0 10px 20px rgba(0,0,0,.08);
+}
+
+.panel-top-left {
+  left: 48px;
+  top: 70px;
+  width: 112px;
+  height: 146px;
+}
+
+.panel-top-right {
+  right: 48px;
+  top: 70px;
+  width: 112px;
+  height: 146px;
+}
+
+.panel-bottom-left {
+  left: 48px;
+  bottom: 82px;
+  width: 112px;
+  height: 188px;
+}
+
+.panel-bottom-right {
+  right: 48px;
+  bottom: 82px;
+  width: 112px;
+  height: 188px;
+}
+
+/* Replace previous yellow-frame look with an iconic frame-style SVG */
+.friends-peephole-frame {
+  position: absolute;
+  left: 50%;
+  top: 37%;
+  width: 148px;
+  height: 202px;
+  translate: -50% -50%;
+  z-index: 5;
+}
+
+.friends-peephole-frame svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.friends-peephole-frame .frame-outer {
+  fill: #f4c430;
+  stroke: #a96900;
+  stroke-width: 5;
+  stroke-linejoin: round;
+}
+
+.friends-peephole-frame .frame-inner {
+  fill: #6b4798;
+  stroke: #f8d75a;
+  stroke-width: 4;
+  stroke-linejoin: round;
+}
+
+.friends-peephole-frame .peephole-centre {
+  fill: #251733;
+  stroke: #f7d45c;
+  stroke-width: 5;
+}
+
+/* Hide old frame if it exists anywhere */
+.yellow-frame {
+  display: none !important;
+}
+
+/* Door knob improves */
+.brass-knob {
+  background:
+    radial-gradient(circle at 35% 30%, #fff1a6, #d09018 42%, #5e3b07 100%) !important;
+  box-shadow:
+    0 7px 18px rgba(0,0,0,.34),
+    0 0 12px rgba(244,196,48,.22) !important;
+}
+
+/* Main UI decorative couch-like base glow */
+html[data-theme] main::before,
+html[data-theme] .app-shell::before {
+  content: '';
+  position: fixed;
+  left: 50%;
+  bottom: -120px;
+  translate: -50% 0;
+  width: min(760px, 92vw);
+  height: 210px;
+  border-radius: 50% 50% 0 0;
+  background:
+    radial-gradient(ellipse at center, rgba(201,111,58,.22), transparent 68%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+html[data-theme="light"] main::before,
+html[data-theme="light"] .app-shell::before {
+  background:
+    radial-gradient(ellipse at center, rgba(214,108,53,.30), transparent 68%);
+}
+
+/* More readable light mode links */
+html[data-theme="light"] a {
+  color: #5a308c;
+}
+
+/* Mobile adjustments */
+@media(max-width: 760px) {
+  .entry-mini-tags {
+    justify-content: center;
+  }
+
+  .friends-peephole-frame {
+    width: 116px;
+    height: 158px;
+  }
+
+  .panel-top-left,
+  .panel-top-right {
+    width: 84px;
+    height: 104px;
+    top: 54px;
+  }
+
+  .panel-bottom-left,
+  .panel-bottom-right {
+    width: 84px;
+    height: 132px;
+    bottom: 58px;
+  }
+
+  .panel-top-left,
+  .panel-bottom-left {
+    left: 38px;
+  }
+
+  .panel-top-right,
+  .panel-bottom-right {
+    right: 38px;
+  }
+}
+
+
+
+/* ==========================================================
+   FRIENDS-STYLE CURLY YELLOW DOOR FRAME V4
+   Mimics the iconic rectangular ornate frame more closely
+   ========================================================== */
+
+.friends-peephole-frame,
+.yellow-frame {
+  display: none !important;
+}
+
+.friends-curly-frame {
+  position: absolute;
+  left: 50%;
+  top: 35.5%;
+  width: 205px;
+  height: 268px;
+  translate: -50% -50%;
+  z-index: 8;
+  pointer-events: none;
+}
+
+.friends-curly-frame svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.curly-frame-body {
+  stroke: #A76600;
+  stroke-width: 5;
+  paint-order: stroke fill;
+}
+
+.frame-band {
+  fill: rgba(255, 238, 128, .42);
+  stroke: rgba(156, 94, 0, .36);
+  stroke-width: 2;
+}
+
+.frame-ridge {
+  fill: none;
+  stroke: #C98708;
+  stroke-width: 8;
+  stroke-linecap: round;
+  opacity: .55;
+}
+
+.frame-ridge.soft {
+  stroke: #FFE57A;
+  stroke-width: 4;
+  opacity: .62;
+}
+
+.frame-ridge.horizontal {
+  stroke-width: 6;
+}
+
+.curl {
+  fill: none;
+  stroke: #F4C430;
+  stroke-width: 18;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 2px 0 rgba(151,88,0,.55));
+}
+
+.curl.side {
+  stroke-width: 15;
+}
+
+.frame-highlight {
+  fill: none;
+  stroke: rgba(255, 246, 170, .82);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.frame-highlight.side-hi {
+  stroke-width: 4;
+  opacity: .72;
+}
+
+.peephole-ring {
+  fill: #F4C430;
+  stroke: #7D4A00;
+  stroke-width: 5;
+}
+
+.peephole-centre {
+  fill: #24162F;
+  stroke: rgba(255,255,255,.32);
+  stroke-width: 2;
+}
+
+/* Door proportions so the frame reads correctly */
+.friends-purple-door {
+  min-height: 610px;
+}
+
+.brass-knob {
+  right: 68px !important;
+  top: 56% !important;
+  width: 28px !important;
+  height: 28px !important;
+}
+
+@media(max-width: 760px) {
+  .friends-curly-frame {
+    width: 158px;
+    height: 210px;
+    top: 36%;
+  }
+
+  .friends-purple-door {
+    min-height: 430px;
+  }
+}
+
+
+
+/* ==========================================================
+   LIGHT MODE V4 — warmer, bolder, less boring
+   ========================================================== */
+
+html[data-theme="light"] {
+  --page-bg-a: #f8d06b;
+  --page-bg-b: #e98545;
+  --page-bg-c: #7b5ba7;
+
+  --surface: rgba(255, 247, 228, 0.82);
+  --surface-strong: rgba(255, 252, 241, 0.95);
+  --surface-solid: #fff4dc;
+
+  --text-main: #281936;
+  --text-soft: rgba(40, 25, 54, 0.78);
+  --text-muted: rgba(40, 25, 54, 0.58);
+
+  --accent-yellow: #f4b900;
+  --accent-purple: #7b4fb3;
+  --accent-green: #17735f;
+  --accent-orange: #d85f31;
+  --accent-red: #c83f37;
+  --accent-blue: #1f78b4;
+
+  --border-soft: rgba(123, 79, 179, 0.30);
+  --border-strong: rgba(216, 95, 49, 0.48);
+
+  --shadow-soft: rgba(104, 55, 20, 0.20);
+  --shadow-strong: rgba(104, 55, 20, 0.32);
+}
+
+html[data-theme="light"] body,
+body[data-theme="light"] {
+  background:
+    radial-gradient(circle at 12% 13%, rgba(244, 185, 0, .58), transparent 21%),
+    radial-gradient(circle at 86% 16%, rgba(123, 79, 179, .34), transparent 24%),
+    radial-gradient(circle at 82% 82%, rgba(23, 115, 95, .30), transparent 28%),
+    radial-gradient(circle at 23% 86%, rgba(216, 95, 49, .38), transparent 27%),
+    linear-gradient(135deg, #fff2d2 0%, #f7c85f 36%, #e98345 68%, #7b5ba7 100%) !important;
+}
+
+/* Big warm colour wash behind the app */
+html[data-theme="light"] #root::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.55), transparent 34%),
+    radial-gradient(ellipse at top left, rgba(255,244,204,.62), transparent 44%),
+    radial-gradient(ellipse at bottom right, rgba(123,91,167,.24), transparent 46%);
+}
+
+/* Monica-apartment wall texture: playful but subtle */
+html[data-theme="light"] body::after {
+  opacity: .38 !important;
+  background-image:
+    radial-gradient(circle, rgba(123,79,179,.20) 1.15px, transparent 1.2px),
+    radial-gradient(circle, rgba(216,95,49,.12) 1px, transparent 1.1px);
+  background-size: 22px 22px, 38px 38px;
+}
+
+/* Light mode title should be bolder */
+html[data-theme="light"] .title-main {
+  color: #2b1939 !important;
+  text-shadow:
+    0 4px 0 rgba(244,185,0,.88),
+    0 12px 0 rgba(216,95,49,.14),
+    0 22px 42px rgba(104,55,20,.22) !important;
+}
+
+html[data-theme="light"] .title-tagline {
+  color: #4e2b72 !important;
+  font-weight: 950;
+}
+
+/* Make the four-dot accent pop */
+html[data-theme="light"] .title-main::after {
+  opacity: 1;
+  filter: drop-shadow(0 5px 8px rgba(104,55,20,.18));
+}
+
+/* Cards: add a coloured top layer and café-board depth */
+html[data-theme="light"] .card,
+html[data-theme="light"] .panel,
+html[data-theme="light"] .episode-card,
+html[data-theme="light"] .picker-card,
+html[data-theme="light"] .result-card,
+html[data-theme="light"] .history-drawer,
+html[data-theme="light"] .history-panel,
+html[data-theme="light"] .mood-panel,
+html[data-theme="light"] .lookup-panel,
+html[data-theme="light"] .random-panel,
+html[data-theme="light"] .selector-panel,
+html[data-theme="light"] .episode-result,
+html[data-theme="light"] .episode-display,
+html[data-theme="light"] .control-card,
+html[data-theme="light"] section,
+html[data-theme="light"] article {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.92), rgba(255,236,190,.70)),
+    radial-gradient(circle at 12% 8%, rgba(244,185,0,.22), transparent 28%),
+    radial-gradient(circle at 92% 12%, rgba(123,79,179,.13), transparent 30%),
+    var(--surface-strong) !important;
+  border: 1px solid rgba(123,79,179,.28) !important;
+  box-shadow:
+    0 26px 60px rgba(104,55,20,.18),
+    0 2px 0 rgba(255,255,255,.75) inset,
+    0 -5px 0 rgba(123,79,179,.05) inset !important;
+}
+
+/* Give major modules different FRIENDS-like moods */
+html[data-theme="light"] .random-panel,
+html[data-theme="light"] .picker-card:nth-of-type(1) {
+  border-top: 6px solid #f4b900 !important;
+}
+
+html[data-theme="light"] .lookup-panel,
+html[data-theme="light"] .picker-card:nth-of-type(2) {
+  border-top: 6px solid #7b4fb3 !important;
+}
+
+html[data-theme="light"] .mood-panel,
+html[data-theme="light"] .picker-card:nth-of-type(3) {
+  border-top: 6px solid #17735f !important;
+}
+
+html[data-theme="light"] .episode-card,
+html[data-theme="light"] .result-card {
+  border-top: 6px solid #d85f31 !important;
+}
+
+/* Inputs and dropdowns should feel designed */
+html[data-theme="light"] input,
+html[data-theme="light"] select,
+html[data-theme="light"] textarea {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.98), rgba(255,244,216,.82)) !important;
+  color: #281936 !important;
+  border: 1.5px solid rgba(123,79,179,.28) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.8),
+    0 8px 18px rgba(104,55,20,.08) !important;
+}
+
+/* Buttons: punchier orange-gold */
+html[data-theme="light"] .primary-button,
+html[data-theme="light"] .netflix-button,
+html[data-theme="light"] button.primary,
+html[data-theme="light"] a.primary,
+html[data-theme="light"] button[type="submit"] {
+  background:
+    linear-gradient(135deg, #f4c430 0%, #f0a11f 38%, #d85f31 100%) !important;
+  color: #281936 !important;
+  border: 1px solid rgba(123,79,179,.28) !important;
+  box-shadow:
+    0 16px 34px rgba(104,55,20,.24),
+    inset 0 1px 0 rgba(255,255,255,.5) !important;
+}
+
+html[data-theme="light"] .primary-button:hover,
+html[data-theme="light"] .netflix-button:hover,
+html[data-theme="light"] button.primary:hover,
+html[data-theme="light"] a.primary:hover {
+  filter: saturate(1.08) contrast(1.02);
+}
+
+/* Chips: fridge magnet aesthetic */
+html[data-theme="light"] .tag-chip,
+html[data-theme="light"] .chip,
+html[data-theme="light"] .tag,
+html[data-theme="light"] .preset-chip,
+html[data-theme="light"] .filter-chip {
+  background:
+    linear-gradient(150deg, rgba(255,255,255,.92), rgba(255,233,180,.68)) !important;
+  color: #281936 !important;
+  border: 1.5px solid rgba(123,79,179,.25) !important;
+  box-shadow:
+    0 9px 18px rgba(104,55,20,.16),
+    inset 0 1px 0 rgba(255,255,255,.86) !important;
+  font-weight: 850;
+}
+
+/* Selected chips: more obvious */
+html[data-theme="light"] .tag-chip.active,
+html[data-theme="light"] .chip.active,
+html[data-theme="light"] .tag.active,
+html[data-theme="light"] .preset-chip.active,
+html[data-theme="light"] .filter-chip.active,
+html[data-theme="light"] button.active {
+  background:
+    linear-gradient(135deg, #7b4fb3 0%, #d85f31 100%) !important;
+  color: #fff4dc !important;
+  border-color: rgba(255,255,255,.46) !important;
+  box-shadow:
+    0 14px 26px rgba(104,55,20,.20),
+    inset 0 1px 0 rgba(255,255,255,.28) !important;
+}
+
+/* Theme toggle: make light state obvious */
+html[data-theme="light"] .theme-toggle-v2 {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.94), rgba(255,232,178,.76)) !important;
+  border-color: rgba(123,79,179,.30) !important;
+  color: #281936 !important;
+}
+
+/* Entry screen in light mode: now colourful, not pale */
+html[data-theme="light"] .friends-entry-wrap {
+  background:
+    radial-gradient(circle at 14% 16%, rgba(244,185,0,.55), transparent 24%),
+    radial-gradient(circle at 83% 18%, rgba(123,79,179,.32), transparent 25%),
+    radial-gradient(circle at 78% 82%, rgba(23,115,95,.25), transparent 27%),
+    linear-gradient(135deg, #fff0ce 0%, #f0b95c 46%, #d87945 100%) !important;
+}
+
+html[data-theme="light"] .entry-copy h2 {
+  color: #281936 !important;
+  text-shadow:
+    0 4px 0 rgba(244,185,0,.40),
+    0 18px 38px rgba(104,55,20,.18) !important;
+}
+
+html[data-theme="light"] .entry-copy p {
+  color: rgba(40,25,54,.78) !important;
+}
+
+/* A little Central Perk chalkboard flavour in light mode */
+html[data-theme="light"] .episode-card::before,
+html[data-theme="light"] .result-card::before,
+html[data-theme="light"] .picker-card::before,
+html[data-theme="light"] .mood-panel::before,
+html[data-theme="light"] .lookup-panel::before,
+html[data-theme="light"] .random-panel::before {
+  box-shadow:
+    0 7px 0 rgba(40,25,54,.08),
+    0 14px 24px rgba(104,55,20,.12);
+}
+
+/* Improve text contrast inside cards */
+html[data-theme="light"] h2,
+html[data-theme="light"] h3,
+html[data-theme="light"] p,
+html[data-theme="light"] span,
+html[data-theme="light"] label {
+  color: inherit;
+}
+
+/* Decorative sofa/café glow becomes more visible in light mode */
+html[data-theme="light"] main::before,
+html[data-theme="light"] .app-shell::before {
+  background:
+    radial-gradient(ellipse at center, rgba(216,95,49,.34), transparent 68%) !important;
+}
+
+/* Light-mode links */
+html[data-theme="light"] a {
+  color: #5e318e !important;
+}
+
+/* Door in light mode should remain strongly purple */
+html[data-theme="light"] .friends-purple-door {
+  background:
+    linear-gradient(125deg, rgba(255,255,255,.16), transparent 24%),
+    radial-gradient(circle at 72% 22%, rgba(244,196,48,.18), transparent 22%),
+    linear-gradient(155deg, #a887d2 0%, #8060ad 44%, #5d3f88 100%) !important;
+  box-shadow:
+    0 34px 90px rgba(104,55,20,.28),
+    inset 0 0 0 9px rgba(255,255,255,.075),
+    inset 0 0 0 18px rgba(44,23,61,.42) !important;
+}
+
+/* Make enter label punchier */
+html[data-theme="light"] .enter-label {
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.78), rgba(255,226,150,.72)) !important;
+  color: #281936 !important;
+  border-color: rgba(123,79,179,.32) !important;
+  box-shadow: 0 12px 26px rgba(104,55,20,.18);
+}
+
+html[data-theme="light"] .refined-door:hover .enter-label {
+  background: linear-gradient(135deg, #f4c430, #d85f31) !important;
+  color: #281936 !important;
+}
+
+
+
+/* ==========================================================
+   OPENING PAGE BRAND CONTRAST FIX
+   Makes "The One to Watch" stand out clearly
+   ========================================================== */
+
+.entry-copy .eyebrow {
+  position: relative;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  color: #24162f !important;
+  background:
+    linear-gradient(135deg, #ffe477 0%, #f4c430 52%, #d88b12 100%) !important;
+  border: 2px solid rgba(255, 244, 180, .72);
+  border-radius: 999px;
+  padding: 10px 15px 9px;
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.28),
+    0 0 0 5px rgba(244,196,48,.16),
+    inset 0 1px 0 rgba(255,255,255,.58);
+  text-shadow: none !important;
+  letter-spacing: .16em;
+  font-weight: 1000;
+}
+
+.entry-copy .eyebrow::before,
+.entry-copy .eyebrow::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #7b4fb3;
+  margin: 0 10px;
+  box-shadow:
+    18px 0 0 #d85f31,
+    36px 0 0 #17735f;
+  display: inline-block;
+}
+
+.entry-copy .eyebrow::after {
+  display: none;
+}
+
+/* Stronger contrast specifically in light mode */
+html[data-theme="light"] .entry-copy .eyebrow {
+  color: #fff7dc !important;
+  background:
+    linear-gradient(135deg, #2b1939 0%, #5b347d 48%, #7b4fb3 100%) !important;
+  border-color: rgba(255, 230, 140, .85);
+  box-shadow:
+    0 12px 28px rgba(104,55,20,.26),
+    0 0 0 5px rgba(123,79,179,.12),
+    inset 0 1px 0 rgba(255,255,255,.22);
+}
+
+html[data-theme="light"] .entry-copy .eyebrow::before {
+  background: #f4c430;
+  box-shadow:
+    18px 0 0 #d85f31,
+    36px 0 0 #17735f;
+}
+
+/* Make the opening headline separate more from colourful backgrounds */
+.entry-copy h2 {
+  max-width: 720px;
+}
+
+html[data-theme="light"] .entry-copy h2 {
+  background: linear-gradient(135deg, #281936 0%, #4e2b72 55%, #281936 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  text-shadow: none !important;
+  filter: drop-shadow(0 8px 14px rgba(255, 244, 210, .62));
+}
+
+html[data-theme="dark"] .entry-copy h2 {
+  text-shadow:
+    0 3px 0 rgba(244,196,48,.24),
+    0 18px 36px rgba(0,0,0,.46) !important;
+}
+
+
+
+/* ==========================================================
+   SET ATMOSPHERE V5
+   Dark = Central Perk night
+   Light = Monica apartment / kitchen daylight
+   ========================================================== */
+
+.set-atmosphere {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Reset older flatness by giving both themes set-design depth */
+html[data-theme="dark"] body,
+body[data-theme="dark"] {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(28, 210, 194, .12), transparent 22%),
+    radial-gradient(circle at 78% 18%, rgba(231, 46, 71, .13), transparent 24%),
+    radial-gradient(circle at 58% 74%, rgba(244, 196, 48, .12), transparent 28%),
+    linear-gradient(135deg, #110c17 0%, #24162f 34%, #122f2a 72%, #0e0b12 100%) !important;
+}
+
+html[data-theme="light"] body,
+body[data-theme="light"] {
+  background:
+    radial-gradient(circle at 14% 14%, rgba(255, 219, 112, .54), transparent 23%),
+    radial-gradient(circle at 84% 16%, rgba(119, 198, 208, .32), transparent 24%),
+    radial-gradient(circle at 76% 82%, rgba(216, 95, 49, .25), transparent 28%),
+    linear-gradient(135deg, #8d73b8 0%, #b18bd0 26%, #f3c36b 62%, #d98945 100%) !important;
+}
+
+/* Background walls */
+.set-wall {
+  position: absolute;
+  inset: 0;
+  transition: opacity .42s ease, transform .42s ease;
+}
+
+.set-brick-wall {
+  opacity: 1;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,.035) 1px, transparent 1px),
+    repeating-linear-gradient(
+      0deg,
+      rgba(103, 47, 32, .22) 0 20px,
+      rgba(60, 28, 25, .22) 20px 22px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(130, 70, 45, .16) 0 54px,
+      rgba(55, 24, 22, .18) 54px 58px
+    );
+  background-size: 58px 44px, 58px 44px, 100% 44px, 58px 100%;
+  mask-image: radial-gradient(circle at 64% 26%, black 0 22%, transparent 58%);
+}
+
+.set-purple-wall {
+  opacity: 0;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255,255,255,.12), transparent 18%),
+    linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,.055) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(123, 91, 167, .58), rgba(150, 119, 193, .32));
+  background-size: auto, 42px 42px, 42px 42px, auto;
+  mask-image: radial-gradient(circle at 24% 42%, black 0 26%, transparent 70%);
+}
+
+html[data-theme="light"] .set-brick-wall {
+  opacity: .88;
+  mask-image: radial-gradient(circle at 72% 39%, black 0 20%, transparent 58%);
+}
+
+html[data-theme="light"] .set-purple-wall {
+  opacity: 1;
+}
+
+/* Central Perk inspired night window */
+.central-perk-window {
+  position: absolute;
+  right: clamp(28px, 6vw, 90px);
+  top: clamp(70px, 13vh, 150px);
+  width: min(430px, 34vw);
+  height: 230px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 242, 216, .13);
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,.035) 1px, transparent 1px),
+    radial-gradient(circle at 62% 42%, rgba(244,196,48,.18), transparent 28%),
+    rgba(8, 15, 18, .34);
+  background-size: 86px 100%, 100% 76px, auto, auto;
+  box-shadow:
+    0 26px 90px rgba(0,0,0,.28),
+    inset 0 0 60px rgba(28,210,194,.06);
+  opacity: .88;
+  transform: rotate(.4deg);
+}
+
+html[data-theme="light"] .central-perk-window {
+  opacity: .18;
+  filter: blur(.2px);
+  transform: translateY(18px) rotate(.4deg);
+}
+
+.window-frame-line {
+  position: absolute;
+  background: rgba(255,242,216,.16);
+}
+
+.line-a {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+}
+
+.line-b {
+  left: 0;
+  right: 0;
+  top: 48%;
+  height: 2px;
+}
+
+/* Neon cup */
+.neon-cup {
+  position: absolute;
+  left: 36px;
+  top: 48px;
+  width: 116px;
+  height: 88px;
+  opacity: .96;
+  animation: neonPulse 3.8s ease-in-out infinite;
+}
+
+.cup-bowl {
+  position: absolute;
+  left: 16px;
+  top: 28px;
+  width: 74px;
+  height: 40px;
+  border: 5px solid #7df7ff;
+  border-top: 0;
+  border-radius: 0 0 28px 28px;
+  box-shadow:
+    0 0 10px #7df7ff,
+    0 0 24px rgba(125,247,255,.54);
+}
+
+.cup-handle {
+  position: absolute;
+  left: 82px;
+  top: 34px;
+  width: 28px;
+  height: 26px;
+  border: 5px solid #7df7ff;
+  border-left: 0;
+  border-radius: 0 18px 18px 0;
+  box-shadow:
+    0 0 10px #7df7ff,
+    0 0 24px rgba(125,247,255,.54);
+}
+
+.cup-saucer {
+  position: absolute;
+  left: 8px;
+  top: 72px;
+  width: 92px;
+  height: 5px;
+  border-radius: 999px;
+  background: #1de2af;
+  box-shadow:
+    0 0 10px #1de2af,
+    0 0 24px rgba(29,226,175,.54);
+}
+
+.steam {
+  position: absolute;
+  top: 0;
+  width: 18px;
+  height: 32px;
+  border-left: 4px solid #fff3b8;
+  border-radius: 50%;
+  opacity: .78;
+  filter: drop-shadow(0 0 9px rgba(255,243,184,.75));
+  animation: steamRise 2.8s ease-in-out infinite;
+}
+
+.steam-one { left: 28px; animation-delay: 0s; }
+.steam-two { left: 51px; animation-delay: .42s; }
+.steam-three { left: 74px; animation-delay: .84s; }
+
+@keyframes neonPulse {
+  0%, 100% { opacity: .78; filter: brightness(.95); }
+  50% { opacity: 1; filter: brightness(1.22); }
+}
+
+@keyframes steamRise {
+  0% { transform: translateY(8px) scale(.9); opacity: 0; }
+  35% { opacity: .8; }
+  100% { transform: translateY(-14px) scale(1.08); opacity: 0; }
+}
+
+/* Monica kitchen inspired daylight structure */
+.apartment-kitchen {
+  position: absolute;
+  right: clamp(20px, 6vw, 86px);
+  bottom: clamp(34px, 7vh, 92px);
+  width: min(470px, 38vw);
+  height: 270px;
+  opacity: .15;
+  transform: translateY(20px);
+  transition: opacity .42s ease, transform .42s ease;
+}
+
+html[data-theme="light"] .apartment-kitchen {
+  opacity: .88;
+  transform: translateY(0);
+}
+
+.kitchen-shelf {
+  position: absolute;
+  left: 54px;
+  width: 160px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #74c7d2, #42a9b5);
+  box-shadow:
+    0 16px 34px rgba(60, 30, 10, .18),
+    inset 0 1px 0 rgba(255,255,255,.38);
+}
+
+.shelf-one {
+  top: 28px;
+  height: 44px;
+}
+
+.shelf-two {
+  top: 88px;
+  height: 86px;
+}
+
+.kitchen-shelf::before,
+.kitchen-shelf::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  width: 22px;
+  height: 18px;
+  border-radius: 8px 8px 4px 4px;
+  background: #f4c430;
+  box-shadow:
+    34px 0 0 #d85f31,
+    68px 0 0 #fff4dc,
+    102px 0 0 #17735f;
+}
+
+.kitchen-shelf::before { left: 18px; }
+.kitchen-shelf::after { left: 28px; top: 46px; opacity: .72; }
+
+.kitchen-cabinet {
+  position: absolute;
+  right: 28px;
+  top: 36px;
+  width: 132px;
+  height: 88px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fff07d, #f4c430);
+  box-shadow:
+    0 16px 34px rgba(60, 30, 10, .18),
+    inset 0 1px 0 rgba(255,255,255,.5);
+}
+
+.fridge-shape {
+  position: absolute;
+  right: 42px;
+  bottom: 14px;
+  width: 102px;
+  height: 128px;
+  border-radius: 18px 18px 10px 10px;
+  background: linear-gradient(135deg, #fff9ef, #f1dfc7);
+  box-shadow:
+    0 18px 34px rgba(60, 30, 10, .18),
+    inset 0 1px 0 rgba(255,255,255,.8);
+}
+
+.fridge-shape::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 54px;
+  height: 2px;
+  background: rgba(43,25,57,.12);
+}
+
+.magnet {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 4px;
+  animation: magnetFloat 4.8s ease-in-out infinite;
+}
+
+.magnet-red { left: 18px; top: 22px; background: #c83f37; }
+.magnet-yellow { left: 55px; top: 31px; background: #f4c430; animation-delay: .5s; }
+.magnet-blue { left: 36px; top: 72px; background: #1f78b4; animation-delay: 1s; }
+.magnet-green { left: 70px; top: 84px; background: #17735f; animation-delay: 1.5s; }
+
+@keyframes magnetFloat {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-3px) rotate(2deg); }
+}
+
+/* Parquet floor inspired by Monica apartment */
+.floor-pattern {
+  position: absolute;
+  left: -8%;
+  right: -8%;
+  bottom: -7%;
+  height: 28vh;
+  opacity: .11;
+  background:
+    linear-gradient(45deg, rgba(123, 58, 20, .35) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(123, 58, 20, .35) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 220, 140, .28) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 220, 140, .28) 75%);
+  background-size: 64px 64px;
+  transform: perspective(420px) rotateX(54deg);
+  transform-origin: bottom;
+}
+
+html[data-theme="light"] .floor-pattern {
+  opacity: .25;
+}
+
+/* Sofa/lamp glow */
+.sofa-glow {
+  position: absolute;
+  left: 50%;
+  bottom: -80px;
+  width: min(880px, 88vw);
+  height: 260px;
+  translate: -50% 0;
+  border-radius: 50% 50% 0 0;
+  background:
+    radial-gradient(ellipse at center, rgba(216, 95, 49, .28), transparent 68%);
+  opacity: .55;
+  animation: lampBreathe 5.5s ease-in-out infinite;
+}
+
+html[data-theme="dark"] .sofa-glow {
+  background:
+    radial-gradient(ellipse at center, rgba(150, 78, 35, .18), transparent 68%);
+}
+
+.lamp-glow {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border-radius: 999px;
+  background: rgba(244,196,48,.18);
+  filter: blur(28px);
+  animation: lampBreathe 4.8s ease-in-out infinite;
+}
+
+.lamp-left {
+  left: 9%;
+  top: 22%;
+}
+
+.lamp-right {
+  right: 24%;
+  top: 15%;
+  animation-delay: 1.1s;
+}
+
+html[data-theme="light"] .lamp-glow {
+  background: rgba(255, 236, 160, .32);
+}
+
+@keyframes lampBreathe {
+  0%, 100% { opacity: .34; transform: scale(.98); }
+  50% { opacity: .68; transform: scale(1.04); }
+}
+
+/* Floating FRIENDS-colour dots */
+.floating-dot {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  opacity: .48;
+  filter: drop-shadow(0 0 10px currentColor);
+  animation: dotDrift 7s ease-in-out infinite;
+}
+
+.dot-red {
+  color: #e53935;
+  background: #e53935;
+  left: 12%;
+  top: 62%;
+}
+
+.dot-yellow {
+  color: #f4c430;
+  background: #f4c430;
+  left: 27%;
+  top: 18%;
+  animation-delay: 1.2s;
+}
+
+.dot-blue {
+  color: #1f78b4;
+  background: #1f78b4;
+  right: 18%;
+  top: 58%;
+  animation-delay: 2.1s;
+}
+
+.dot-green {
+  color: #17735f;
+  background: #17735f;
+  right: 34%;
+  bottom: 16%;
+  animation-delay: 3s;
+}
+
+@keyframes dotDrift {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: .35; }
+  50% { transform: translateY(-16px) translateX(8px); opacity: .72; }
+}
+
+/* Pull-cord switch */
+.theme-toggle-v2 {
+  display: none !important;
+}
+
+.pull-switch {
+  position: relative;
+  justify-self: end;
+  margin-top: 4px;
+  width: 92px;
+  min-height: 118px;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  color: var(--text-main);
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  padding: 0;
+}
+
+.switch-ceiling {
+  width: 58px;
+  height: 14px;
+  border-radius: 0 0 999px 999px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.18), rgba(0,0,0,.18)),
+    var(--surface-strong);
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 10px 22px var(--shadow-soft);
+}
+
+.switch-cord {
+  width: 2px;
+  height: 58px;
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,.8), rgba(244,196,48,.78), rgba(123,79,179,.42));
+  transform-origin: top center;
+  box-shadow: 0 0 10px rgba(244,196,48,.24);
+}
+
+.switch-pull {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 35% 30%, #fff7cd, #f4c430 45%, #a96806 100%);
+  box-shadow:
+    0 12px 24px var(--shadow-soft),
+    0 0 18px rgba(244,196,48,.28),
+    inset 0 1px 0 rgba(255,255,255,.52);
+}
+
+.switch-label {
+  margin-top: 9px;
+  font-size: .72rem;
+  font-weight: 950;
+  letter-spacing: .04em;
+  color: var(--text-soft) !important;
+  text-align: center;
+  white-space: nowrap;
+}
+
+html[data-theme="dark"] .pull-switch .switch-pull {
+  background:
+    radial-gradient(circle at 35% 30%, #d7f8ff, #7df7ff 45%, #1f5c4d 100%);
+  box-shadow:
+    0 12px 24px var(--shadow-soft),
+    0 0 22px rgba(125,247,255,.36),
+    inset 0 1px 0 rgba(255,255,255,.52);
+}
+
+/* Make top brand row work with vertical pull cord */
+.top-brand-row {
+  align-items: start !important;
+}
+
+/* Light-mode card text should sit above richer background */
+html[data-theme="light"] .card,
+html[data-theme="light"] .panel,
+html[data-theme="light"] .episode-card,
+html[data-theme="light"] .picker-card,
+html[data-theme="light"] .result-card,
+html[data-theme="light"] .history-drawer,
+html[data-theme="light"] .history-panel,
+html[data-theme="light"] .mood-panel,
+html[data-theme="light"] .lookup-panel,
+html[data-theme="light"] .random-panel,
+html[data-theme="light"] .selector-panel,
+html[data-theme="light"] .episode-result,
+html[data-theme="light"] .episode-display,
+html[data-theme="light"] .control-card,
+html[data-theme="light"] section,
+html[data-theme="light"] article {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.90), rgba(255,237,199,.74)),
+    radial-gradient(circle at 12% 8%, rgba(116,199,210,.18), transparent 28%),
+    radial-gradient(circle at 92% 12%, rgba(244,196,48,.18), transparent 30%),
+    radial-gradient(circle at 72% 88%, rgba(216,95,49,.12), transparent 26%),
+    rgba(255,249,235,.88) !important;
+}
+
+/* Dark cards feel like café booths */
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .episode-card,
+html[data-theme="dark"] .picker-card,
+html[data-theme="dark"] .result-card,
+html[data-theme="dark"] .history-drawer,
+html[data-theme="dark"] .history-panel,
+html[data-theme="dark"] .mood-panel,
+html[data-theme="dark"] .lookup-panel,
+html[data-theme="dark"] .random-panel,
+html[data-theme="dark"] .selector-panel,
+html[data-theme="dark"] .episode-result,
+html[data-theme="dark"] .episode-display,
+html[data-theme="dark"] .control-card,
+html[data-theme="dark"] section,
+html[data-theme="dark"] article {
+  background:
+    linear-gradient(145deg, rgba(255,242,216,.12), rgba(13, 27, 25, .18)),
+    radial-gradient(circle at 10% 8%, rgba(244,196,48,.08), transparent 30%),
+    radial-gradient(circle at 92% 12%, rgba(125,247,255,.06), transparent 30%),
+    rgba(21, 14, 30, .68) !important;
+}
+
+/* Entry page should inherit theme set language */
+html[data-theme="dark"] .friends-entry-wrap {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(28, 210, 194, .12), transparent 22%),
+    radial-gradient(circle at 78% 18%, rgba(231, 46, 71, .13), transparent 24%),
+    radial-gradient(circle at 58% 74%, rgba(244, 196, 48, .12), transparent 28%),
+    linear-gradient(135deg, #110c17 0%, #24162f 34%, #122f2a 72%, #0e0b12 100%) !important;
+}
+
+html[data-theme="light"] .friends-entry-wrap {
+  background:
+    radial-gradient(circle at 14% 14%, rgba(255, 219, 112, .54), transparent 23%),
+    radial-gradient(circle at 84% 16%, rgba(119, 198, 208, .32), transparent 24%),
+    radial-gradient(circle at 76% 82%, rgba(216, 95, 49, .25), transparent 28%),
+    linear-gradient(135deg, #8d73b8 0%, #b18bd0 26%, #f3c36b 62%, #d98945 100%) !important;
+}
+
+/* Mobile: reduce complexity but keep character */
+@media(max-width: 760px) {
+  .central-perk-window {
+    width: 260px;
+    height: 148px;
+    right: -44px;
+    top: 90px;
+    opacity: .24;
+  }
+
+  .apartment-kitchen {
+    width: 280px;
+    height: 190px;
+    right: -80px;
+    bottom: 30px;
+    opacity: .32;
+  }
+
+  html[data-theme="light"] .apartment-kitchen {
+    opacity: .46;
+  }
+
+  .pull-switch {
+    justify-self: center;
+    min-height: 92px;
+    margin-top: -8px;
+  }
+
+  .switch-cord {
+    height: 38px;
+  }
+
+  .switch-label {
+    display: none;
+  }
+
+  .floor-pattern {
+    height: 18vh;
+  }
+
+  .floating-dot {
+    opacity: .24;
+  }
+}
+
+
+
+/* ==========================================================
+   DARK MODE READABILITY FIX
+   Fixes headings like:
+   Purple door controls
+   Central Perk Recommendation Board
+   Recent loop
+   ========================================================== */
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] .panel-title,
+html[data-theme="dark"] .card-title,
+html[data-theme="dark"] .section-title,
+html[data-theme="dark"] .board-title,
+html[data-theme="dark"] .history-title,
+html[data-theme="dark"] .controls-title,
+html[data-theme="dark"] .random-panel h2,
+html[data-theme="dark"] .lookup-panel h2,
+html[data-theme="dark"] .mood-panel h2,
+html[data-theme="dark"] .history-panel h2,
+html[data-theme="dark"] .history-drawer h2,
+html[data-theme="dark"] .episode-card h2,
+html[data-theme="dark"] .result-card h2,
+html[data-theme="dark"] section h2,
+html[data-theme="dark"] article h2,
+html[data-theme="dark"] section h3,
+html[data-theme="dark"] article h3 {
+  color: #fff7dc !important;
+  text-shadow:
+    0 2px 0 rgba(78, 55, 118, 0.85),
+    0 8px 20px rgba(0, 0, 0, 0.55),
+    0 0 18px rgba(244, 196, 48, 0.14) !important;
+}
+
+/* Smaller descriptive text inside dark cards */
+html[data-theme="dark"] .card p,
+html[data-theme="dark"] .panel p,
+html[data-theme="dark"] .episode-card p,
+html[data-theme="dark"] .result-card p,
+html[data-theme="dark"] .history-panel p,
+html[data-theme="dark"] .history-drawer p,
+html[data-theme="dark"] .random-panel p,
+html[data-theme="dark"] .lookup-panel p,
+html[data-theme="dark"] .mood-panel p,
+html[data-theme="dark"] section p,
+html[data-theme="dark"] article p {
+  color: rgba(255, 242, 216, 0.84) !important;
+}
+
+/* Labels and small UI text */
+html[data-theme="dark"] label,
+html[data-theme="dark"] small,
+html[data-theme="dark"] .muted,
+html[data-theme="dark"] .subtle,
+html[data-theme="dark"] .helper-text,
+html[data-theme="dark"] .description,
+html[data-theme="dark"] .episode-meta,
+html[data-theme="dark"] .history-meta {
+  color: rgba(255, 242, 216, 0.76) !important;
+}
+
+/* Make dark cards slightly more opaque so text does not blend into the busy background */
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .panel,
+html[data-theme="dark"] .episode-card,
+html[data-theme="dark"] .picker-card,
+html[data-theme="dark"] .result-card,
+html[data-theme="dark"] .history-drawer,
+html[data-theme="dark"] .history-panel,
+html[data-theme="dark"] .mood-panel,
+html[data-theme="dark"] .lookup-panel,
+html[data-theme="dark"] .random-panel,
+html[data-theme="dark"] .selector-panel,
+html[data-theme="dark"] .episode-result,
+html[data-theme="dark"] .episode-display,
+html[data-theme="dark"] .control-card,
+html[data-theme="dark"] section,
+html[data-theme="dark"] article {
+  background:
+    linear-gradient(145deg, rgba(255, 242, 216, 0.15), rgba(13, 27, 25, 0.24)),
+    radial-gradient(circle at 10% 8%, rgba(244, 196, 48, 0.09), transparent 30%),
+    radial-gradient(circle at 92% 12%, rgba(125, 247, 255, 0.07), transparent 30%),
+    rgba(18, 12, 27, 0.82) !important;
+  border-color: rgba(244, 196, 48, 0.34) !important;
+}
+
+/* Specific reinforcement for the three problem headings */
+html[data-theme="dark"] *:has(> h2),
+html[data-theme="dark"] *:has(> h3) {
+  color: #fff7dc;
+}
+
+
+
+/* ==========================================================
+   FINAL DARK MODE LABEL CONTRAST FIX
+   Targets:
+   - Purple door controls
+   - Central Perk Recommendation Board
+   - Recent loop
+   ========================================================== */
+
+html[data-theme="dark"] .card-kicker,
+html[data-theme="dark"] .history > b,
+html[data-theme="dark"] .history b,
+html[data-theme="dark"] .control-card .card-kicker,
+html[data-theme="dark"] .picker-card .card-kicker,
+html[data-theme="dark"] .fridge-card > b {
+  display: inline-flex !important;
+  width: fit-content;
+  align-items: center;
+  color: #21172c !important;
+  background: linear-gradient(135deg, #fff3a6 0%, #f4c430 55%, #d18a10 100%) !important;
+  border: 2px solid rgba(255, 246, 190, 0.82) !important;
+  border-radius: 999px !important;
+  padding: 8px 12px !important;
+  margin-bottom: 14px !important;
+  font-weight: 1000 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  text-shadow: none !important;
+  box-shadow:
+    0 9px 22px rgba(0, 0, 0, 0.34),
+    0 0 0 4px rgba(244, 196, 48, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.62) !important;
+  filter: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Make "Recent loop" behave like a title block */
+html[data-theme="dark"] .history > b {
+  margin-bottom: 8px !important;
+}
+
+/* If any parent card is washing the badge out, force isolation */
+html[data-theme="dark"] .control-card,
+html[data-theme="dark"] .picker-card,
+html[data-theme="dark"] .history {
+  isolation: isolate;
+}
+
+/* Add a slight dark backing behind the whole content area inside dark cards */
+html[data-theme="dark"] .control-card::after,
+html[data-theme="dark"] .picker-card::after,
+html[data-theme="dark"] .history::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border-radius: 22px;
+  background: rgba(8, 6, 14, 0.16);
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+
+/* ==========================================================
+   WELCOME PAGE TITLE READABILITY FIX
+   Keeps "The One to Watch" readable on opening page
+   ========================================================== */
+
+html[data-theme="dark"] .entry-copy .eyebrow,
+html[data-theme="light"] .entry-copy .eyebrow {
+  display: inline-flex !important;
+  width: fit-content !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #fff7dc !important;
+  background:
+    linear-gradient(135deg, #24162f 0%, #4e2b72 48%, #7b4fb3 100%) !important;
+  border: 2px solid rgba(244, 196, 48, 0.88) !important;
+  border-radius: 999px !important;
+  padding: 11px 16px 10px !important;
+  margin-bottom: 18px !important;
+  font-weight: 1000 !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.45) !important;
+  box-shadow:
+    0 14px 32px rgba(0, 0, 0, 0.34),
+    0 0 0 5px rgba(244, 196, 48, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  isolation: isolate !important;
+  z-index: 5 !important;
+}
+
+/* Dark mode: make it warmer and brighter */
+html[data-theme="dark"] .entry-copy .eyebrow {
+  color: #24162f !important;
+  background:
+    linear-gradient(135deg, #fff1a8 0%, #f4c430 50%, #d18a10 100%) !important;
+  border-color: rgba(255, 246, 190, 0.92) !important;
+  text-shadow: none !important;
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.44),
+    0 0 0 5px rgba(244, 196, 48, 0.18),
+    0 0 28px rgba(244, 196, 48, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.64) !important;
+}
+
+/* Light mode: dark purple badge for strong contrast */
+html[data-theme="light"] .entry-copy .eyebrow {
+  color: #fff7dc !important;
+  background:
+    linear-gradient(135deg, #24162f 0%, #4e2b72 48%, #7b4fb3 100%) !important;
+  border-color: rgba(244, 196, 48, 0.82) !important;
+}
+
+/* Ensure the decorative dots inside the badge stay visible */
+html[data-theme] .entry-copy .eyebrow::before {
+  content: '' !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 999px !important;
+  background: #e53935 !important;
+  margin-right: 11px !important;
+  box-shadow:
+    18px 0 0 #f4c430,
+    36px 0 0 #2574a9,
+    54px 0 0 #17735f !important;
+  display: inline-block !important;
+  flex: 0 0 auto !important;
+}
+
+html[data-theme] .entry-copy .eyebrow::after {
+  display: none !important;
+}
+
+/* Prevent the general card-kicker badge rules from interfering with welcome title */
+html[data-theme] .entry-copy .eyebrow.card-kicker,
+html[data-theme] .entry-copy span.eyebrow {
+  text-transform: uppercase !important;
+}
+
+
+
+/* ==========================================================
+   REMOVE FRIENDS-COLOUR DOTS AND MULTICOLOUR BARS
+   ========================================================== */
+
+/* Remove colour dots from the welcome-page badge */
+html[data-theme] .entry-copy .eyebrow::before,
+html[data-theme] .entry-copy .eyebrow::after {
+  content: none !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Remove colour dots below the main title */
+html[data-theme] .title-main::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Remove colour-themed bars from cards / panels */
+html[data-theme] .episode-card::before,
+html[data-theme] .result-card::before,
+html[data-theme] .picker-card::before,
+html[data-theme] .mood-panel::before,
+html[data-theme] .lookup-panel::before,
+html[data-theme] .random-panel::before,
+html[data-theme] .control-card::before,
+html[data-theme] .selector-panel::before,
+html[data-theme] section::before,
+html[data-theme] article::before {
+  content: none !important;
+  display: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  margin: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove floating coloured background dots */
+html[data-theme] .floating-dot,
+html[data-theme] .dot-red,
+html[data-theme] .dot-yellow,
+html[data-theme] .dot-blue,
+html[data-theme] .dot-green {
+  display: none !important;
+}
+
+/* Remove coloured top borders added to panels in light mode */
+html[data-theme="light"] .random-panel,
+html[data-theme="light"] .lookup-panel,
+html[data-theme="light"] .mood-panel,
+html[data-theme="light"] .picker-card,
+html[data-theme="light"] .episode-card,
+html[data-theme="light"] .result-card {
+  border-top-width: 1px !important;
+  border-top-style: solid !important;
+  border-top-color: rgba(123,79,179,.28) !important;
+}
+
+/* Keep panels structured with a subtler single-colour accent instead */
+html[data-theme="dark"] .card-kicker,
+html[data-theme="dark"] .history > b,
+html[data-theme="dark"] .history b {
+  background: linear-gradient(135deg, #fff3a6 0%, #f4c430 55%, #d18a10 100%) !important;
+}
+
+html[data-theme="light"] .card-kicker,
+html[data-theme="light"] .history > b,
+html[data-theme="light"] .history b {
+  background: linear-gradient(135deg, #fff7e8 0%, #f7d889 100%) !important;
+  color: #281936 !important;
+}
+
+
+
+/* ==========================================================
+   REMOVE DOTTED COFFEE BOX
+   Removes the dotted rounded container and coffee icon
+   ========================================================== */
+
+/* Remove dotted rounded box */
+html[data-theme] .feature-frame::before,
+html[data-theme] .main-grid::before,
+html[data-theme] .dashboard-grid::before,
+html[data-theme] .coffee-frame::before,
+html[data-theme] .coffee-card::before,
+html[data-theme] .dotted-frame::before {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove coffee icon if it is generated through pseudo-elements */
+html[data-theme] .app-shell::after,
+html[data-theme] .layout::after,
+html[data-theme] main::after,
+html[data-theme] .feature-frame::after,
+html[data-theme] .main-grid::after,
+html[data-theme] .dashboard-grid::after,
+html[data-theme] .coffee-frame::after,
+html[data-theme] .coffee-card::after,
+html[data-theme] .dotted-frame::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Remove visible coffee motif classes if present */
+html[data-theme] .coffee-motif,
+html[data-theme] .coffee-icon,
+html[data-theme] .coffee-cup,
+html[data-theme] .floating-coffee,
+html[data-theme] .corner-coffee {
+  display: none !important;
+}
+
+/* Remove dashed/dotted border styling from any leftover wrapper */
+html[data-theme] .feature-frame,
+html[data-theme] .coffee-frame,
+html[data-theme] .coffee-card,
+html[data-theme] .dotted-frame {
+  border-style: solid !important;
+  border-color: transparent !important;
+}
+

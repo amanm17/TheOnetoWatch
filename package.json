@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run validate:data && npm run data:json && vite build",
+    "preview": "vite preview",
+    "data:json": "node scripts/csv-to-json.js",
+    "validate:data": "node scripts/validate-data.js",
+    "tag:report": "node scripts/generate-tag-report.js",
+    "import:github": "node scripts/import-friends-data.js",
+    "enrich:data": "node scripts/enrich-episodes.js",
+    "enrich:transcripts": "node scripts/enrich-from-transcripts.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "framer-motion": "latest",
+    "lucide-react": "latest",
+    "papaparse": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.4",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest"
+  },
+  "type": "module"
+}
