@@ -2621,3 +2621,572 @@ html[data-theme] .dotted-frame {
   border-color: transparent !important;
 }
 
+
+
+/* ==========================================================
+   DARK MODE READABILITY PATCH
+   Requested small fixes only for dark theme
+   ========================================================== */
+
+/* 1. Category heads: Mood, Theme, Context, Character energy */
+html[data-theme="dark"] .tag-group-title,
+html[data-theme="dark"] .filter-group-title,
+html[data-theme="dark"] .category-title,
+html[data-theme="dark"] .mood-panel label,
+html[data-theme="dark"] .tag-selector label,
+html[data-theme="dark"] .tag-section label,
+html[data-theme="dark"] .tag-section-title,
+html[data-theme="dark"] .mood-panel h4,
+html[data-theme="dark"] .selector-panel h4 {
+  color: #fff0b8 !important;
+  font-size: 1.02rem !important;
+  font-weight: 1000 !important;
+  letter-spacing: 0.04em !important;
+  text-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.48),
+    0 0 14px rgba(244, 196, 48, 0.18) !important;
+}
+
+/* 2. Hide unnecessary curation/status bubble */
+html[data-theme="dark"] .tag-chip,
+html[data-theme="dark"] .chip,
+html[data-theme="dark"] .tag,
+html[data-theme="dark"] .preset-chip,
+html[data-theme="dark"] .filter-chip,
+html[data-theme="dark"] .status-chip,
+html[data-theme="dark"] .meta-chip {
+  &:has-text("github_seed_imported_needs_transcript_tags") {
+    display: none !important;
+  }
+}
+
+/* Browser-safe fallback: hide common curation/status containers if specifically marked */
+html[data-theme="dark"] [data-value="github_seed_imported_needs_transcript_tags"],
+html[data-theme="dark"] [title="github_seed_imported_needs_transcript_tags"],
+html[data-theme="dark"] .github_seed_imported_needs_transcript_tags {
+  display: none !important;
+}
+
+/* 3. Why this one? bubble: dark purple text on light bubble */
+html[data-theme="dark"] .why-card,
+html[data-theme="dark"] .why-this-one,
+html[data-theme="dark"] .episode-reason,
+html[data-theme="dark"] .recommendation-reason,
+html[data-theme="dark"] .reason-bubble,
+html[data-theme="dark"] .explanation-bubble {
+  color: #24162f !important;
+  background:
+    linear-gradient(145deg, rgba(255, 244, 210, 0.96), rgba(244, 196, 48, 0.78)) !important;
+  border: 1px solid rgba(255, 240, 184, 0.78) !important;
+  text-shadow: none !important;
+}
+
+html[data-theme="dark"] .why-card *,
+html[data-theme="dark"] .why-this-one *,
+html[data-theme="dark"] .episode-reason *,
+html[data-theme="dark"] .recommendation-reason *,
+html[data-theme="dark"] .reason-bubble *,
+html[data-theme="dark"] .explanation-bubble * {
+  color: #24162f !important;
+  text-shadow: none !important;
+}
+
+/* 4. Tag bubbles in result/tagging sections: dark green text */
+html[data-theme="dark"] .episode-card .tag-chip,
+html[data-theme="dark"] .episode-card .chip,
+html[data-theme="dark"] .episode-card .tag,
+html[data-theme="dark"] .result-card .tag-chip,
+html[data-theme="dark"] .result-card .chip,
+html[data-theme="dark"] .result-card .tag,
+html[data-theme="dark"] .episode-result .tag-chip,
+html[data-theme="dark"] .episode-result .chip,
+html[data-theme="dark"] .episode-result .tag,
+html[data-theme="dark"] .episode-display .tag-chip,
+html[data-theme="dark"] .episode-display .chip,
+html[data-theme="dark"] .episode-display .tag {
+  color: #123f34 !important;
+  background:
+    linear-gradient(145deg, rgba(239, 223, 255, 0.98), rgba(205, 180, 234, 0.92)) !important;
+  border: 1px solid rgba(255, 242, 216, 0.46) !important;
+  text-shadow: none !important;
+  font-weight: 900 !important;
+}
+
+/* 5. Score bubbles: Iconic, Comfort, Chaos, Romance */
+html[data-theme="dark"] .score-chip,
+html[data-theme="dark"] .score-bubble,
+html[data-theme="dark"] .score-card,
+html[data-theme="dark"] .episode-score,
+html[data-theme="dark"] .scores span,
+html[data-theme="dark"] .score-grid span,
+html[data-theme="dark"] .metrics span,
+html[data-theme="dark"] .episode-metrics span {
+  color: #24162f !important;
+  background:
+    linear-gradient(145deg, rgba(255, 239, 198, 0.96), rgba(244, 196, 48, 0.72)) !important;
+  border: 1px solid rgba(255, 242, 216, 0.58) !important;
+  text-shadow: none !important;
+  font-weight: 950 !important;
+}
+
+/* Make score text inside children dark too */
+html[data-theme="dark"] .score-chip *,
+html[data-theme="dark"] .score-bubble *,
+html[data-theme="dark"] .score-card *,
+html[data-theme="dark"] .episode-score *,
+html[data-theme="dark"] .scores span *,
+html[data-theme="dark"] .score-grid span *,
+html[data-theme="dark"] .metrics span *,
+html[data-theme="dark"] .episode-metrics span * {
+  color: #24162f !important;
+  text-shadow: none !important;
+}
+
+
+
+/* ==========================================================
+   DARK MODE READABILITY PATCH V2
+   Uses runtime-applied classes from ReadabilityFix.jsx
+   Light mode remains untouched.
+   ========================================================== */
+
+html[data-theme="dark"] .totw-hide-import-status {
+  display: none !important;
+}
+
+/* Mood / Theme / Context / Character energy */
+html[data-theme="dark"] .totw-dark-category-head {
+  color: #fff0b8 !important;
+  font-size: 1.08rem !important;
+  font-weight: 1000 !important;
+  letter-spacing: 0.035em !important;
+  text-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.65),
+    0 0 18px rgba(244, 196, 48, 0.22) !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Why this one? explanation bubble */
+html[data-theme="dark"] .totw-dark-reason-bubble {
+  color: #24162f !important;
+  background:
+    linear-gradient(145deg, rgba(255, 244, 210, 0.98), rgba(244, 196, 48, 0.86)) !important;
+  border: 1px solid rgba(255, 240, 184, 0.82) !important;
+  text-shadow: none !important;
+  box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.52) !important;
+}
+
+html[data-theme="dark"] .totw-dark-reason-bubble,
+html[data-theme="dark"] .totw-dark-reason-bubble * {
+  color: #24162f !important;
+  text-shadow: none !important;
+}
+
+/* Result tag bubbles */
+html[data-theme="dark"] .totw-dark-result-tag {
+  color: #123f34 !important;
+  background:
+    linear-gradient(145deg, rgba(242, 230, 255, 0.98), rgba(210, 185, 238, 0.94)) !important;
+  border: 1px solid rgba(255, 242, 216, 0.54) !important;
+  text-shadow: none !important;
+  font-weight: 950 !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+html[data-theme="dark"] .totw-dark-result-tag,
+html[data-theme="dark"] .totw-dark-result-tag * {
+  color: #123f34 !important;
+  text-shadow: none !important;
+}
+
+/* Score bubbles: Iconic / Comfort / Chaos / Romance */
+html[data-theme="dark"] .totw-dark-score-bubble {
+  color: #24162f !important;
+  background:
+    linear-gradient(145deg, rgba(255, 239, 198, 0.98), rgba(244, 196, 48, 0.78)) !important;
+  border: 1px solid rgba(255, 242, 216, 0.62) !important;
+  text-shadow: none !important;
+  font-weight: 1000 !important;
+  opacity: 1 !important;
+  filter: none !important;
+  box-shadow:
+    0 10px 22px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.52) !important;
+}
+
+html[data-theme="dark"] .totw-dark-score-bubble,
+html[data-theme="dark"] .totw-dark-score-bubble * {
+  color: #24162f !important;
+  text-shadow: none !important;
+}
+
+/* Extra safety: dark-mode result area chips/scores even if class names differ */
+html[data-theme="dark"] .episode-card [class*="chip"],
+html[data-theme="dark"] .episode-card [class*="tag"],
+html[data-theme="dark"] .result-card [class*="chip"],
+html[data-theme="dark"] .result-card [class*="tag"],
+html[data-theme="dark"] .episode-result [class*="chip"],
+html[data-theme="dark"] .episode-result [class*="tag"],
+html[data-theme="dark"] .episode-display [class*="chip"],
+html[data-theme="dark"] .episode-display [class*="tag"] {
+  color: #123f34 !important;
+  text-shadow: none !important;
+  font-weight: 950 !important;
+}
+
+html[data-theme="dark"] .episode-card [class*="score"],
+html[data-theme="dark"] .result-card [class*="score"],
+html[data-theme="dark"] .episode-result [class*="score"],
+html[data-theme="dark"] .episode-display [class*="score"],
+html[data-theme="dark"] .episode-card [class*="metric"],
+html[data-theme="dark"] .result-card [class*="metric"],
+html[data-theme="dark"] .episode-result [class*="metric"],
+html[data-theme="dark"] .episode-display [class*="metric"] {
+  color: #24162f !important;
+  text-shadow: none !important;
+  font-weight: 1000 !important;
+}
+
+
+
+/* ==========================================================
+   READABILITY PATCH AESTHETIC RESTORE
+   Keeps readability, restores original visual softness.
+   Dark mode only. Light mode untouched.
+   ========================================================== */
+
+/* Hide imported status tag */
+html[data-theme="dark"] .totw-hide-import-status {
+  display: none !important;
+}
+
+/* Category heads: readable, but not badge-like */
+html[data-theme="dark"] .totw-dark-category-head {
+  color: #fff0b8 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 0 8px !important;
+  font-size: 1.08rem !important;
+  font-weight: 950 !important;
+  letter-spacing: 0.035em !important;
+  text-transform: none !important;
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.55),
+    0 0 14px rgba(244, 196, 48, 0.16) !important;
+}
+
+/* Why this one: keep dark purple text, but make bubble subtle and integrated */
+html[data-theme="dark"] .totw-dark-reason-bubble {
+  color: #24162f !important;
+  background:
+    linear-gradient(145deg, rgba(255, 240, 184, 0.94), rgba(255, 224, 139, 0.86)) !important;
+  border: 1px solid rgba(244, 196, 48, 0.48) !important;
+  border-radius: 18px !important;
+  padding: 14px 16px !important;
+  text-shadow: none !important;
+  box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42) !important;
+}
+
+html[data-theme="dark"] .totw-dark-reason-bubble,
+html[data-theme="dark"] .totw-dark-reason-bubble * {
+  color: #24162f !important;
+  text-shadow: none !important;
+}
+
+/* Result tags: readable dark green text, but softer chip styling */
+html[data-theme="dark"] .totw-dark-result-tag {
+  color: #123f34 !important;
+  background:
+    linear-gradient(145deg, rgba(237, 224, 255, 0.94), rgba(207, 183, 236, 0.88)) !important;
+  border: 1px solid rgba(255, 242, 216, 0.36) !important;
+  border-radius: 14px !important;
+  text-shadow: none !important;
+  font-weight: 850 !important;
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.34) !important;
+}
+
+html[data-theme="dark"] .totw-dark-result-tag,
+html[data-theme="dark"] .totw-dark-result-tag * {
+  color: #123f34 !important;
+  text-shadow: none !important;
+}
+
+/* Score bubbles: readable deep purple, but not loud */
+html[data-theme="dark"] .totw-dark-score-bubble {
+  color: #24162f !important;
+  background:
+    linear-gradient(145deg, rgba(255, 235, 173, 0.94), rgba(244, 196, 48, 0.74)) !important;
+  border: 1px solid rgba(255, 242, 216, 0.42) !important;
+  border-radius: 14px !important;
+  text-shadow: none !important;
+  font-weight: 900 !important;
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.38) !important;
+}
+
+html[data-theme="dark"] .totw-dark-score-bubble,
+html[data-theme="dark"] .totw-dark-score-bubble * {
+  color: #24162f !important;
+  text-shadow: none !important;
+}
+
+/* Undo the previous overly broad visual forcing */
+html[data-theme="dark"] .episode-card [class*="chip"]:not(.totw-dark-result-tag),
+html[data-theme="dark"] .episode-card [class*="tag"]:not(.totw-dark-result-tag),
+html[data-theme="dark"] .result-card [class*="chip"]:not(.totw-dark-result-tag),
+html[data-theme="dark"] .result-card [class*="tag"]:not(.totw-dark-result-tag),
+html[data-theme="dark"] .episode-result [class*="chip"]:not(.totw-dark-result-tag),
+html[data-theme="dark"] .episode-result [class*="tag"]:not(.totw-dark-result-tag),
+html[data-theme="dark"] .episode-display [class*="chip"]:not(.totw-dark-result-tag),
+html[data-theme="dark"] .episode-display [class*="tag"]:not(.totw-dark-result-tag) {
+  color: inherit !important;
+}
+
+/* Keep main cards atmospheric, not over-patched */
+html[data-theme="dark"] .episode-card,
+html[data-theme="dark"] .result-card,
+html[data-theme="dark"] .episode-result,
+html[data-theme="dark"] .episode-display {
+  background:
+    linear-gradient(145deg, rgba(255,242,216,.12), rgba(13, 27, 25, .18)),
+    radial-gradient(circle at 10% 8%, rgba(244,196,48,.08), transparent 30%),
+    radial-gradient(circle at 92% 12%, rgba(125,247,255,.06), transparent 30%),
+    rgba(21, 14, 30, .68) !important;
+}
+
+
+
+/* ==========================================================
+   DARK READABILITY POLISH V3
+   Keeps current readability, reduces visual loudness.
+   ========================================================== */
+
+/* Softer Why this one bubble */
+html[data-theme="dark"] .totw-dark-reason-bubble {
+  background:
+    linear-gradient(145deg, rgba(255, 242, 216, 0.92), rgba(239, 213, 146, 0.82)) !important;
+  border-color: rgba(244, 196, 48, 0.34) !important;
+  box-shadow:
+    0 10px 22px rgba(0, 0, 0, 0.20),
+    inset 0 1px 0 rgba(255, 255, 255, 0.34) !important;
+}
+
+/* Softer result tags */
+html[data-theme="dark"] .totw-dark-result-tag {
+  background:
+    linear-gradient(145deg, rgba(232, 220, 245, 0.90), rgba(203, 181, 225, 0.82)) !important;
+  border-color: rgba(255, 242, 216, 0.28) !important;
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.26) !important;
+}
+
+/* Softer score pills */
+html[data-theme="dark"] .totw-dark-score-bubble {
+  background:
+    linear-gradient(145deg, rgba(255, 232, 170, 0.90), rgba(234, 187, 57, 0.68)) !important;
+  border-color: rgba(255, 242, 216, 0.30) !important;
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+}
+
+/* Category heads: keep readable but less glowing */
+html[data-theme="dark"] .totw-dark-category-head {
+  color: #ffeeb2 !important;
+  text-shadow:
+    0 2px 7px rgba(0, 0, 0, 0.46),
+    0 0 8px rgba(244, 196, 48, 0.10) !important;
+}
+
+
+
+/* ==========================================================
+   DARK MODE RESULT SECTION READABILITY FIX
+   Targets the "Why this one?" card and generated episode tags
+   ========================================================== */
+
+/* Why this one card body text */
+html[data-theme="dark"] .totw-dark-reason-bubble {
+  background:
+    linear-gradient(145deg, rgba(255, 248, 232, 0.96), rgba(255, 238, 194, 0.90)) !important;
+  color: #24162f !important;
+  border-color: rgba(244, 196, 48, 0.38) !important;
+}
+
+html[data-theme="dark"] .totw-dark-reason-bubble,
+html[data-theme="dark"] .totw-dark-reason-bubble *,
+html[data-theme="dark"] .totw-dark-reason-bubble p,
+html[data-theme="dark"] .totw-dark-reason-bubble span {
+  color: #24162f !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+/* Keep the heading strong but not oversized */
+html[data-theme="dark"] .totw-dark-reason-bubble strong,
+html[data-theme="dark"] .totw-dark-reason-bubble b,
+html[data-theme="dark"] .totw-dark-reason-bubble h3,
+html[data-theme="dark"] .totw-dark-reason-bubble h4 {
+  color: #24162f !important;
+  font-weight: 1000 !important;
+}
+
+/* Generated episode tag bubbles */
+html[data-theme="dark"] .totw-dark-result-tag {
+  background:
+    linear-gradient(145deg, rgba(229, 213, 249, 0.96), rgba(207, 184, 235, 0.90)) !important;
+  color: #123f34 !important;
+  border-color: rgba(255, 242, 216, 0.34) !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  font-weight: 900 !important;
+}
+
+/* Force text inside tag bubbles to dark green */
+html[data-theme="dark"] .totw-dark-result-tag,
+html[data-theme="dark"] .totw-dark-result-tag *,
+html[data-theme="dark"] .episode-card .totw-dark-result-tag,
+html[data-theme="dark"] .result-card .totw-dark-result-tag,
+html[data-theme="dark"] .episode-result .totw-dark-result-tag,
+html[data-theme="dark"] .episode-display .totw-dark-result-tag {
+  color: #123f34 !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+/* Extra fallback for tag chips in the result area */
+html[data-theme="dark"] .episode-card .tag-chip,
+html[data-theme="dark"] .episode-card .chip,
+html[data-theme="dark"] .episode-card .tag,
+html[data-theme="dark"] .result-card .tag-chip,
+html[data-theme="dark"] .result-card .chip,
+html[data-theme="dark"] .result-card .tag,
+html[data-theme="dark"] .episode-result .tag-chip,
+html[data-theme="dark"] .episode-result .chip,
+html[data-theme="dark"] .episode-result .tag,
+html[data-theme="dark"] .episode-display .tag-chip,
+html[data-theme="dark"] .episode-display .chip,
+html[data-theme="dark"] .episode-display .tag {
+  color: #123f34 !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+
+
+/* ==========================================================
+   DARK MODE RESULT SECTION TEXT FIX
+   Exact class-based fix for EpisodeCard and TagSelector.
+   Light mode untouched.
+   ========================================================== */
+
+/* Hide unwanted imported curation status bubble */
+html[data-theme="dark"] .curation-badge {
+  display: none !important;
+}
+
+/* Category heads: Mood, Theme, Context, Character energy */
+html[data-theme="dark"] .chip-section > b {
+  color: #fff0b8 !important;
+  font-size: 1.08rem !important;
+  font-weight: 1000 !important;
+  letter-spacing: 0.035em !important;
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.55),
+    0 0 10px rgba(244, 196, 48, 0.16) !important;
+}
+
+/* Why this one? card */
+html[data-theme="dark"] .plot-box {
+  background:
+    linear-gradient(145deg, #fff6df 0%, #f6e1b0 100%) !important;
+  color: #2a1838 !important;
+  border: 1px solid rgba(244, 196, 48, 0.48) !important;
+  border-left: 8px solid #c96f3a !important;
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55) !important;
+}
+
+/* Why this one? heading and body text */
+html[data-theme="dark"] .plot-box strong,
+html[data-theme="dark"] .plot-box p,
+html[data-theme="dark"] .plot-box * {
+  color: #2a1838 !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+html[data-theme="dark"] .plot-box strong {
+  font-weight: 1000 !important;
+}
+
+html[data-theme="dark"] .plot-box p {
+  color: #3b241f !important; /* chocolate brown */
+  font-weight: 750 !important;
+  line-height: 1.45 !important;
+}
+
+/* Generated tag section under result card */
+html[data-theme="dark"] .tag-cloud span {
+  background:
+    linear-gradient(145deg, #eadcff 0%, #d4bdeb 100%) !important;
+  color: #123f34 !important; /* dark green */
+  border: 1px solid rgba(255, 242, 216, 0.38) !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  font-weight: 900 !important;
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32) !important;
+}
+
+/* Score row: Iconic / Comfort / Chaos / Romance */
+html[data-theme="dark"] .score-row span {
+  background:
+    linear-gradient(145deg, #ffe9a6 0%, #e9bd43 100%) !important;
+  color: #2a1838 !important; /* deep purple */
+  border: 1px solid rgba(255, 242, 216, 0.38) !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  font-weight: 900 !important;
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32) !important;
+}
+
+html[data-theme="dark"] .score-row span strong {
+  color: #2a1838 !important;
+  text-shadow: none !important;
+  font-weight: 1000 !important;
+}
+
+/* Also make normal filter chips clearer in dark mode */
+html[data-theme="dark"] .chip {
+  color: #123f34 !important;
+  background:
+    linear-gradient(145deg, #eadcff 0%, #d8c4f0 100%) !important;
+  text-shadow: none !important;
+  font-weight: 850 !important;
+}
+
+html[data-theme="dark"] .chip.active {
+  color: #24162f !important;
+  background:
+    linear-gradient(145deg, #fff0b8 0%, #f4c430 100%) !important;
+  text-shadow: none !important;
+  font-weight: 950 !important;
+}
+
